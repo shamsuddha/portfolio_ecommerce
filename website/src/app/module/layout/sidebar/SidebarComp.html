@@ -1,27 +1,258 @@
 <aside>
   <div class="filter-section">
-      <h5>Filters</h5>
-      <div class="mb-3">
-          <label class="form-label">Colors</label>
-          <div class="d-flex gap-2">
-              <button class="btn btn-sm btn-outline-dark">Black</button>
-              <button class="btn btn-sm btn-outline-danger">Red</button>
-              <button class="btn btn-sm btn-outline-primary">Blue</button>
-          </div>
+    <div class="border p-3 mb-3">
+      <!-- Price Range Filter -->
+      <h5 class="mt-4 border-bottom pb-2">Price Range</h5>
+      <input
+        type="range"
+        class="form-range"
+        min="970"
+        max="9350"
+        id="priceRange"
+      />
+      <div class="d-flex justify-content-between">
+        <span>970</span>
+        <span>9,350</span>
       </div>
-      <div class="mb-3">
-          <label class="form-label">Sizes</label>
-          <select class="form-select">
-              <option value="">Select Size</option>
-              <option value="S">S</option>
-              <option value="M">M</option>
-              <option value="L">L</option>
-              <option value="XL">XL</option>
-          </select>
+
+      <!-- Availability Filter -->
+      <h5 class="mt-4 border-bottom pb-2">Availability</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="inStock" />
+        <label class="form-check-label" for="inStock">In Stock</label>
       </div>
-      <div class="mb-3">
-          <label class="form-label">Price Range</label>
-          <input type="range" class="form-range" min="0" max="1500">
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="preOrder"
+        />
+        <label class="form-check-label" for="preOrder">Pre Order</label>
       </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="upcoming"
+        />
+        <label class="form-check-label" for="upcoming">Up Coming</label>
+      </div>
+
+      <!-- Type Filter -->
+      <h5 class="mt-4 border-bottom pb-2">Type</h5>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="internal"
+        />
+        <label class="form-check-label" for="internal">Internal</label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="external"
+        />
+        <label class="form-check-label" for="external">External</label>
+      </div>
+
+      <!-- Interface Filter -->
+      <h5 class="mt-4 border-bottom pb-2">Interface</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="sata" />
+        <label class="form-check-label" for="sata">SATA</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="usb" />
+        <label class="form-check-label" for="usb">USB</label>
+      </div>
+
+      <!-- Read Speed Filter -->
+      <h5 class="mt-4 border-bottom pb-2">ReadSpeed</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="upto10x" />
+        <label class="form-check-label" for="upto10x">Up to 10x</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="11to30x" />
+        <label class="form-check-label" for="11to30x">11x to 30x</label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="31to50x" />
+        <label class="form-check-label" for="31to50x">31x to 50x</label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="51xAndAbove"
+        />
+        <label class="form-check-label" for="51xAndAbove">51x & Above</label>
+      </div>
+      <h5 class="mt-4 border-bottom pb-2">Categories</h5>
+      <div class="list-group">
+        <a href="#" class=""
+          >Supports & Braces</a
+        ><br />
+        <a href="#" class=""
+          >Hand Strengtheners</a
+        >
+        <br />
+        <a href="#" class="">Home Gyms</a>
+        <br />
+        <a href="#" class=""
+          >Unisex's Sleeves</a
+        >
+        <br />
+        <a href="#" class=""
+          >Running Belt</a
+        >
+        <br />
+        <a href="#" class=""
+          >Mount Holders</a
+        >
+        <br />
+        <a href="#" class=""
+          >Flashlights</a
+        >
+        <br />
+        <a href="#" class=""
+          >Exercise Bands</a
+        >
+        <br />
+        <a href="#" class="">Yoga Mats</a>
+        <br />
+        <a href="#" class=""
+          >Water Bottles</a
+        >
+        <br />
+        <a href="#" class=""
+          >Fishing Reels</a
+        >
+        <br />
+        <a href="#" class=""
+          >Sports & Outdoors</a
+        >
+        <br />
+      </div>
+      <h5 class="mt-4 border-bottom pb-2">Brands</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="brand1" />
+        <label class="form-check-label" for="brand1"> FITNESS MART </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="brand2" />
+        <label class="form-check-label" for="brand2"> JIN & Jolly </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="brand3" />
+        <label class="form-check-label" for="brand3"> UGREEN </label>
+      </div>
+      <h5 class="mt-4 border-bottom pb-2">Size</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="size1" />
+        <label class="form-check-label" for="size1"> 41 </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="size2" />
+        <label class="form-check-label" for="size2"> 42 </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="size3" />
+        <label class="form-check-label" for="size3"> 43 </label>
+      </div>
+      <h5 class="mt-4 border-bottom pb-2">Shipped From</h5>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="shipped1"
+        />
+        <label class="form-check-label" for="shipped1"> Dhaka </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="shipped2"
+        />
+        <label class="form-check-label" for="shipped2"> Barishal </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="shipped3"
+        />
+        <label class="form-check-label" for="shipped3"> Chattogram </label>
+      </div>
+      <h5 class="mt-4 border-bottom pb-2">Warranty Type</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="warranty1" />
+        <label class="form-check-label" for="warranty1"> No Warranty </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="warranty2" />
+        <label class="form-check-label" for="warranty2">
+          Seller Warranty
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="warranty3" />
+        <label class="form-check-label" for="warranty3"> Brand Warranty </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="warranty4" />
+        <label class="form-check-label" for="warranty4">
+          Local seller warranty
+        </label>
+      </div>
+      <h5 class="mt-4 border-bottom pb-2">Main Material</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="materialRubber" />
+        <label class="form-check-label" for="materialRubber"> Rubber </label>
+      </div>
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          id="materialPolyester"
+        />
+        <label class="form-check-label" for="materialPolyester">
+          Polyester
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="materialPlastic" />
+        <label class="form-check-label" for="materialPlastic"> Plastic </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="materialMesh" />
+        <label class="form-check-label" for="materialMesh"> Mesh </label>
+      </div>
+
+      <h5 class="mt-4 border-bottom pb-2">Warranty Period</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="warranty1Year" />
+        <label class="form-check-label" for="warranty1Year"> 1 Year </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="warranty3Months" />
+        <label class="form-check-label" for="warranty3Months"> 3 Months </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" id="warranty6Months" />
+        <label class="form-check-label" for="warranty6Months"> 6 Months </label>
+      </div>
+    </div>
   </div>
 </aside>

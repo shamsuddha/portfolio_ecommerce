@@ -13,6 +13,9 @@ import { SidebarComp } from "../layout/sidebar/SidebarComp";
 })
 export class SingleProductComp implements OnInit {
 
+  selectedSize: string | null = null;
+  selectedColor: string | null = null;
+
   constructor() { }
 
   ngOnInit(): void { }
@@ -34,4 +37,12 @@ export class SingleProductComp implements OnInit {
       title: 'Image 3'
     }
   ];
+
+  selectSize(size: string){
+    this.selectedSize = size;
+  }
+
+  selectColor(color: string){
+    this.selectedColor = color;
+  }
 }
