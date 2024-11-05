@@ -1,60 +1,222 @@
 <div class="container mt-4">
   <div class="row">
-    <!-- Product Image Slider -->
-    <div class="col-md-6">
-      <img src="https://via.placeholder.com/400x400" class="img-fluid" alt="Product Image">
+    <div class="col-md-4">
+      <div class="col-12 d-flex justify-content-center">
+        <img
+          src="https://placehold.co/400x500/orange/white"
+          class="img-fluid"
+          alt="Product Image"
+        />
+      </div>
+      <div class="row mt-2 d-flex justify-content-center">
+        <div class="col">
+          <img
+            src="https://placehold.co/120x150/000000/FFF"
+            class="img-fluid p-0 m-0"
+            alt="Product Image"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="https://placehold.co/120x150/000000/FFF"
+            class="img-fluid p-0 m-0"
+            alt="Product Image"
+          />
+        </div>
+        <div class="col">
+          <img
+            src="https://placehold.co/120x150/000000/FFF"
+            class="img-fluid p-0 m-0"
+            alt="Product Image"
+          />
+        </div>
+      </div>
     </div>
-
-    <!-- Product Details -->
-    <div class="col-md-6">
+    <div class="col-md-5">
       <div class="product-details">
-        <p class="border-bottom">0 total orders | 42 times viewed</p>        
-        <h3 class="p-1 border-bottom">Candy Red Solid T-shirt</h3>
-        <div class="mb-3 mt-2">
-        <span class="bg-primary text-light m-1 p-1 rounded">Dining Cover</span>
-        <span class="bg-secondary text-light m-1 p-1 rounded">Chinese Dining Cover</span>
+        <p class="border-bottom text-secondary text-lg-start text-sm-center">
+          0 total orders | 42 times viewed
+        </p>
+        <h3>Candy Red Solid T-shirt</h3>
+        <div class="mb-3 mt-1">
+          <span class="bg-primary text-light m-1 p-1 rounded">
+            Dining Cover</span
+          >
+          <span class="bg-secondary text-light m-1 p-1 rounded">
+            Chinese Dining Cover</span
+          >
         </div>
         <div class="mb-3 mt-2">
-          <span>Product Rating (0 of 5)</span><br>
-          <span class="text-warning">
-              ★★★☆☆
-          </span>
-      </div>
-      <div class="mt-2 d-flex">
-        <h4 class="text-success mx-1">$45.00</h4>
-        <span class="text-muted text-decoration-line-through m-1">2,700 BDT</span>
-      </div>
-      <div class="d-flex">
-      <p class="mt-4"><strong>Short Description</strong><br>Chinese Print Chair Cover 6 pcs</p>
-      </div>
+          <span>Product Rating (0 of 5)</span><br />
+          <span class="text-warning"> ★★★☆☆ </span>
+        </div>
+        <div class="mt-2 d-flex">
+          <h4 class="text-success mx-1">$45.00</h4>
+          <span class="text-muted text-decoration-line-through m-1"
+            >2,700 BDT</span
+          >
+        </div>
+        <div>
+          <h6>Short Description:</h6>
+          <p>
+            Chinese Print Chair Cover 6pcs, Chinese Print Chair Cover 6 pcs.
+            Chinese Print Chair Cover 6 pcs
+          </p>
+        </div>
         <!-- Size Selection -->
         <div class="mb-3">
-          <label for="sizeSelect" class="form-label">Select Size : {{selectedSize || "No size selected"}}</label> <br/>
-          <button class="btn border-primary rounded-0 m-1" (click)="selectSize('S')">S</button>
-          <button class="btn border-primary rounded-0 m-1" (click)="selectSize('M')">M</button>
-          <button class="btn border-primary rounded-0 m-1" (click)="selectSize('L')">L</button>
-          <button class="btn border-primary rounded-0 m-1" (click)="selectSize('XL')">XL</button>
-          <button class="btn border-primary rounded-0 m-1" (click)="selectSize('XXL')">XL</button>
+          <label for="sizeSelect" class="form-label">
+            Select Size : {{selectedSize || "No size selected"}}
+          </label>
+          <br />
+          <button
+            class="btn border-primary rounded-0 m-1"
+            (click)="selectSize('S')"
+          >
+            S
+          </button>
+          <button
+            class="btn border-primary rounded-0 m-1"
+            (click)="selectSize('M')"
+          >
+            M
+          </button>
+          <button
+            class="btn border-primary rounded-0 m-1"
+            (click)="selectSize('L')"
+          >
+            L
+          </button>
+          <button
+            class="btn border-primary rounded-0 m-1"
+            (click)="selectSize('XL')"
+          >
+            XL
+          </button>
+          <button
+            class="btn border-primary rounded-0 m-1"
+            (click)="selectSize('XXL')"
+          >
+            XXL
+          </button>
         </div>
         <div class="mb-3">
-          <label for="sizeSelect" class="form-label">Select Color : {{selectedColor || "No color selected"}}</label> <br/>
-          <button class="btn rounded-0 m-1" (click)="selectColor('Red')" style="border: 1px solid red;">Red</button>
-          <button class="btn rounded-0 m-1" (click)="selectColor('Blue')" style="border: 1px solid blue;">Blue</button>
-          <button class="btn rounded-0 m-1" (click)="selectColor('Yellow')" style="border: 1px solid yellow;">Yellow</button>
-          <button class="btn rounded-0 m-1" (click)="selectColor('Green')" style="border: 1px solid green;">Green</button>
-          <button class="btn rounded-0 m-1" (click)="selectColor('Black')" style="border: 1px solid black;">Black</button>
+          <label for="sizeSelect" class="form-label"
+            >Select Color : {{selectedColor || "No color selected"}}</label
+          >
+          <br />
+          <button
+            class="btn rounded-0 m-1"
+            (click)="selectColor('Red')"
+            style="border: 1px solid red"
+          >
+            Red
+          </button>
+          <button
+            class="btn rounded-0 m-1"
+            (click)="selectColor('Blue')"
+            style="border: 1px solid blue"
+          >
+            Blue
+          </button>
+          <button
+            class="btn rounded-0 m-1"
+            (click)="selectColor('Yellow')"
+            style="border: 1px solid yellow"
+          >
+            Yellow
+          </button>
+          <button
+            class="btn rounded-0 m-1"
+            (click)="selectColor('Green')"
+            style="border: 1px solid green"
+          >
+            Green
+          </button>
+          <button
+            class="btn rounded-0 m-1"
+            (click)="selectColor('Black')"
+            style="border: 1px solid black"
+          >
+            Black
+          </button>
         </div>
-        <!-- Quantity Selection -->
         <div class="mb-3">
           <label for="quantity" class="form-label">Quantity</label>
-          <input type="number" id="quantity" class="form-control" min="1" value="1">
+          <input
+            type="number"
+            id="quantity"
+            class="form-control"
+            min="1"
+            value="1"
+          />
+        </div>
+        <div class="mb-3 d-flex">
+          <button class="btn btn-primary btn-custom mx-1 rounded-0">
+            Add to Cart
+          </button>
+          <button class="btn btn-success btn-custom mx-1 rounded-0">
+            Buy Now
+          </button>
+        </div>
+        <!-- Additional Info -->
+        <div class="mt-4">
+          <h6>Additional Info</h6>
+          <ul>
+            <li>100% Original Products</li>
+            <li>Free Delivery on order above BDT. 5000</li>
+            <li>Pay on delivery is available</li>
+            <li>Easy 7 days returns and exchanges</li>
+          </ul>
         </div>
 
-        <!-- Add to Cart Button -->
-        <div class="mb-3 d-flex">
-        <button class="btn btn-primary btn-custom mx-1 rounded-0">Add to Cart</button>
-        <button class="btn btn-success btn-custom mx-1 rounded-0">Buy Now</button>
+        <!-- Share -->
+        <div class="mt-4">
+          <span>Share It: </span>
+          <a href="#" class="text-dark me-2"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="text-dark me-2"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-dark me-2"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" class="text-dark"><i class="fab fa-linkedin"></i></a>
         </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Details</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Video</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Review</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="mt-5">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Details</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Video</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Review</a>
+      </li>
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content mt-3">
+      <div class="tab-pane fade show active">
+        <p>Product details will go here...</p>
+      </div>
+      <div class="tab-pane fade">
+        <p>Product videos will go here...</p>
+      </div>
+      <div class="tab-pane fade">
+        <p>Product reviews will go here...</p>
       </div>
     </div>
   </div>
