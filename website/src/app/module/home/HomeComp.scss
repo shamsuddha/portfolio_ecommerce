@@ -33,7 +33,6 @@
   background-color: #007bff;
   color: #fff;
   border: none;
-  padding: 10px 20px;
   font-size: 16px;
   margin-top: 10px;
   text-transform: uppercase;
@@ -43,7 +42,6 @@
 .feature-card {
   background-color: #f9f9f9;
   border: 1px solid #ddd;
-  padding: 20px;
   text-align: center;
   align-items: center;
 }
@@ -64,11 +62,8 @@
   color: #666;
 }
 
-
 .product-card {
-  padding-top: 10px;
   text-align: center;
-  margin-bottom: 20px;
 }
 
 .product-image {
@@ -79,9 +74,6 @@
   justify-content: center;
   font-size: 24px;
   color: #aaa;
-  margin-top: 15px;
-  padding:15px;
-  padding-top: 0px;
 }
 
 .category-card {
@@ -92,7 +84,6 @@
   font-size: 24px;
   color: #aaa;
   text-align: center;
-  padding: 15px;
   border: 1px solid #ddd;
 }
 
@@ -122,7 +113,6 @@
 .product-title {
   font-weight: bold;
   font-size: 14px;
-  margin: 5px 0;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -131,7 +121,6 @@
 .product-price {
   font-size: 16px;
   color: #000;
-  margin: 5px 0;
 }
 
 .star-rating {
@@ -166,7 +155,6 @@
   border: none;
   background-color: #007bff;
   color: #fff;
-  padding: 5px 10px;
   cursor: pointer;
   font-size: 14px;
   font-weight: bold;
