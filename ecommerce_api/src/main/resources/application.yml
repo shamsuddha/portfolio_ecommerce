@@ -1,0 +1,62 @@
+server:
+  port: 8080
+spring:
+  jpa:
+    open-in-view: false
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    # database-platform: org.hibernate.dialect.MySQL8Dialect
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        # dialect: org.hibernate.dialect.MySQL8Dialect
+        format_sql: true
+  #spring.servlet.multipart.location=
+  servlet:
+    multipart:
+      enabled: true
+      file-size-threshold: 2KB
+      max-file-size: 300MB
+      max-request-size: 315MB
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/db1
+    name: postgres
+    username: postgres
+    password: 123456
+    # jdbc:postgresql://localhost:9072/db1?user=user1&password=password1
+    #    driver-class-name: com.mysql.cj.jdbc.Driver
+    #    url: jdbc:mysql://localhost:3306/db1
+    #    name: ee
+    #    username: root
+    #    password: root
+
+    hikari:
+      connection-timeout: 60000
+      minimum-idle: 15
+      maximum-pool-size: 30
+      idle-timeout: 10000
+
+#spring.jpa.show-sql=true
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        orm:
+          jdbc:
+            bind: TRACE
+        type:
+          descriptor:
+            sql: TRACE
+      springframework:
+        web:
+          filter:
+            CommonsRequestLoggingFilter: DEBUG
+#logging.level.org.springframework=TRACE
+

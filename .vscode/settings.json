@@ -1,0 +1,17 @@
+{
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "askForPassword": true,
+            "driver": "PostgreSQL",
+            "name": "shamsuddha",
+            "group": "shamsuddha",
+            "database": "postgres",
+            "username": "postgres"
+        }
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
+}
