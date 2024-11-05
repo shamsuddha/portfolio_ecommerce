@@ -1,0 +1,91 @@
+
+.content {
+  padding: 20px;
+}
+
+.container {
+  padding: 15px 20px;
+}
+
+.logo img {
+  max-height: 60px;
+  width: auto;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-input {
+  flex-grow: 1;
+  padding: 10px 15px;
+  border: 2px solid #ddd;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.15);
+}
+
+.search-container .btn {
+  padding: 16px 15px;
+  border: none;
+  background-color: #4a90e2;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-container .btn:hover {
+  background-color: #357ab8;
+}
+
+.cart-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.cart-icon span {
+  cursor: pointer;
+  color: #1c1b1b;
+  transition: color 0.3s ease;
+}
+
+.cart-icon span:hover {
+  color: #4a90e2;
+}
+
+.shop-by-category-button {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+a.nav-link:hover {
+  color: #1c1b1b;
+
+}
+
+.cdk-overlay-pane {
+  margin-top: 20px;
+}
+
+/* Ensure your custom menu is styled */
+.custom-menu .mat-menu-panel {
+  min-width: 0px !important; /* Prevents default min-width */
+  width: 100%; /* Set it to 100% to match parent button width */
+}
+
+/* Specific styling for the trigger button if needed */
+.category-button {
+  width: 200px; /* Set your desired width for the trigger button */
+}

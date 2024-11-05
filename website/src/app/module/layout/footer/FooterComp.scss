@@ -1,0 +1,106 @@
+.footer {
+  color: rgb(153, 153, 153);
+  padding: 40px 0;
+  padding-bottom: 0px;
+  background-color: rgb(33, 33, 33);
+  line-height: 21px;
+}
+
+.footer-bottom
+{
+  background-color: rgb(29, 29, 29)
+}
+
+.footer ul
+{
+  padding: 0px;
+}
+
+.footer ul li
+{
+  list-style: none;
+}
+
+.footer .footer-logo {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  display: block;
+  font-weight: bold;
+}
+
+.footer-section {
+  margin-bottom: 20px;
+}
+
+.footer a {
+  color: rgb(153, 153, 153);
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+.footer a.trans::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #d6d6d6;
+  transition: width 0.4s ease;
+}
+
+.footer a:hover::after {
+  width: 100%;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.footer .social-icons a {
+  margin-right: 10px;
+  color: #ccc;
+  font-size: 18px;
+  text-decoration: none;
+  transition: none;
+}
+
+.footer .form-control {
+  border-radius: 0;
+}
+
+.footer .btn-primary {
+  border-radius: 0;
+}
+
+.footer .footer-bottom {
+  padding-top: 10px;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #777;
+}
+
+
+
+.mobile-nav {
+  background-color: rgb(33, 33, 33);
+  color: #777;
+  position: fixed;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content:space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-size: 1.5rem;
+  align-items: center;
+}
+
+@media screen and (min-width: 600px) {
+  .mobile-nav {
+  display: none;
+  }
+}

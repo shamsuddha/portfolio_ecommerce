@@ -1,0 +1,23 @@
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-6 d-flex justify-content-start">
+          <span class="mx-2">Welcome to Our Store</span>
+          <span class="mx-2 text-center"><i class="fa-solid fa-phone"></i>
+            Call Us: 01879830435
+          </span>
+        </div>
+        <div class="col-12 col-lg-6 text-center text-lg-end d-none d-lg-block">
+          <a [matMenuTriggerFor]="menu" class="ms-3" style="cursor: pointer;">
+            <i class="fa-solid fa-user m-1"></i>
+            My Account
+          </a>
+          <mat-menu #menu="matMenu" class="d-none d-lg-block custom-menu-login">
+            <button mat-menu-item>Login</button>
+            <button mat-menu-item>Registration</button>
+          </mat-menu>
+        </div>
+      </div>
+    </div>
+  </div>
