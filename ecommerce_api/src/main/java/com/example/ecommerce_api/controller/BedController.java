@@ -1,5 +1,10 @@
 package com.example.ecommerce_api.controller;
 
+import io.hms.api.controller.request_dto.BedSearchDto;
+import io.hms.api.entity.Bed;
+import io.hms.api.service.BedService;
+import lombok.AllArgsConstructor;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -7,12 +12,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import lombok.AllArgsConstructor;
-
 @RestController
 @RequestMapping("/bed")
 @AllArgsConstructor
 public class BedController {
+
 
   private final BedService roomService;
 
@@ -35,5 +39,4 @@ public class BedController {
   public ResponseEntity<Page<Bed>> search(@RequestBody BedSearchDto roomSearchDto) {
     return new ResponseEntity(roomService.searchBed(roomSearchDto), HttpStatusCode.valueOf(200));
   }
-    
 }

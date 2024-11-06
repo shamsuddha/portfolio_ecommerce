@@ -1,4 +1,4 @@
-package com.example.ecommerce_api.service.validation;
+package io.hms.api.service.validation;
 
 import io.hms.api.controller.request_dto.LoginInfoDto;
 import io.hms.api.exception.UserInformException;

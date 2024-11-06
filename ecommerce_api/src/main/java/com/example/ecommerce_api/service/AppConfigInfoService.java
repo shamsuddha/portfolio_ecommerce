@@ -1,8 +1,6 @@
 package com.example.ecommerce_api.service;
 
 
-import com.example.ecommerce_api.repository.AppConfigInfoRepository;
-import com.example.ecommerce_api.service.common.EntityValidationService;
 import com.querydsl.core.types.Predicate;
 import com.querydsl.jpa.impl.JPAQuery;
 
@@ -13,7 +11,6 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
 
 @Service
 @AllArgsConstructor

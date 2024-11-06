@@ -1,4 +1,4 @@
-package com.example.ecommerce_api.service.transform;
+package io.hms.api.service.transform;
 
 import io.hms.api.dto.FileInfoDto;
 import io.hms.api.entity.FileInfo;
