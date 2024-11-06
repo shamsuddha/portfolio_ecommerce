@@ -50,11 +50,21 @@ export class VerticalNavComp implements OnInit {
         ]
       },
 
-      { id: '4', label: 'Floor setup', icon: 'fa-solid fa-house', link: '/authenticated/floor-setup' },
-      { id: '5', label: 'Bed setup', icon: 'fa-solid fa-house', link: '/authenticated/bed-setup' },
+      { id: '4', label: 'Visit Website', icon: 'fa-solid fa-chart-simple', link: '/authenticated/category' },
+      { id: '5', label: 'Category Setup', icon: 'fa-solid fa-house', link: '/authenticated/bed-setup' },
+      { id: '6', label: 'Sub Category Setup', icon: 'fa-solid fa-house', link: '/role-setup' },
+      { id: '7', label: 'Unit Setup', icon: 'fa-solid fa-house', link: '/role-setup' },
+      { id: '8', label: 'Brand Setup', icon: 'fa-solid fa-house', link: '/role-setup' },
+      { id: '8', label: 'Model Setup', icon: 'fa-solid fa-house', link: '/role-setup' },
+      { id: '8', label: 'Product Setup', icon: 'fa-solid fa-house', link: '/role-setup' },
+      { id: '8', label: 'Order Setup', icon: 'fa-solid fa-house', link: '/role-setup' },
+      { id: '8', label: 'Review', icon: 'fa-solid fa-house', link: '/role-setup' },
+      { id: '8', label: 'Wishlist', icon: 'fa-solid fa-house', link: '/role-setup' },
+      { id: '8', label: 'Subscriber', icon: 'fa-solid fa-house', link: '/role-setup' },
+      { id: '8', label: 'Report', icon: 'fa-solid fa-house', link: '/role-setup' },
+      { id: '8', label: 'Settings', icon: 'fa-solid fa-house', link: '/role-setup' },
+      { id: '8', label: 'Logout', icon: 'fa-solid fa-house', link: '/role-setup' },
 
-      { id: '6', label: 'Role setup', icon: 'fa-solid fa-house', link: '/role-setup' },
-      
     ];
   }
 

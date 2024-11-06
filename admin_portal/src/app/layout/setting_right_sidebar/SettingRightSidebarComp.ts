@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {LAYOUT_MODE, LAYOUT_WIDTH, TOPBAR, SIDEBAR_SIZE, SIDEBAR_COLOR, LAYOUT_POSITION} from '../layouts.model';
-import {EventService} from "../../service/EventService";
+import { Component, OnInit } from '@angular/core';
+import { LAYOUT_MODE, LAYOUT_WIDTH, TOPBAR, SIDEBAR_SIZE, SIDEBAR_COLOR, LAYOUT_POSITION } from '../layouts.model';
+import { EventService } from "../../service/EventService";
 
 @Component({
   selector: 'SettingRightSidebarComp',

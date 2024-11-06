@@ -7,8 +7,8 @@
             "port": 5432,
             "askForPassword": true,
             "driver": "PostgreSQL",
-            "name": "rajit",
-            "group": "rajit",
+            "name": "Rajit",
+            "group": "Rajit",
             "database": "postgres",
             "username": "postgres"
         }
