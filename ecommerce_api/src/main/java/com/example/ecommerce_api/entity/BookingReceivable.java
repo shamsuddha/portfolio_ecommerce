@@ -3,8 +3,8 @@ package com.example.ecommerce_api.entity;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-import io.hms.api.enums.DiscountType;
-import io.hms.api.enums.PaymentType;
+import com.example.ecommerce_api.enums.DiscountType;
+import com.example.ecommerce_api.enums.PaymentType;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.Accessors;

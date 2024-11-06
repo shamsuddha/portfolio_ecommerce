@@ -6,6 +6,7 @@ import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import com.example.ecommerce_api.controller.request_dto.RoomRateDetailSearchDto;
 import com.example.ecommerce_api.entity.RoomRateDetail;
 import com.example.ecommerce_api.service.RoomRateDetailService;
 

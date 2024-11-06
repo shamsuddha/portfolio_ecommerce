@@ -7,6 +7,7 @@ import com.example.ecommerce_api.service.common.EntityValidationService;
 import com.querydsl.core.types.Predicate;
 import com.querydsl.jpa.impl.JPAQuery;
 
+import com.example.ecommerce_api.entity.QAppConfigInfo;
 import jakarta.persistence.EntityManager;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -14,6 +15,7 @@ import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import static com.example.ecommerce_api.service.predicate.AppConfigInfoPredicate.makePredicate;
 
 @Service
 @AllArgsConstructor

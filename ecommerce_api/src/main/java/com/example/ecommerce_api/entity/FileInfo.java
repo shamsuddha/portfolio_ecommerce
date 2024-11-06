@@ -2,7 +2,7 @@ package com.example.ecommerce_api.entity;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-import io.hms.api.enums.FileType;
+import com.example.ecommerce_api.enums.FileType;
 import jakarta.persistence.*;
 import lombok.*;
 import lombok.experimental.Accessors;

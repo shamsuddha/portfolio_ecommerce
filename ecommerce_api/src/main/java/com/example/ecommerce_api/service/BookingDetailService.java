@@ -5,6 +5,7 @@ import com.querydsl.core.types.Predicate;
 import com.querydsl.jpa.impl.JPAQuery;
 import com.example.ecommerce_api.controller.request_dto.BookingDetailSearchDto;
 import com.example.ecommerce_api.entity.BookingDetail;
+import com.example.ecommerce_api.entity.QBookingDetail;
 import com.example.ecommerce_api.repository.BookingDetailRepository;
 import com.example.ecommerce_api.service.common.EntityValidationService;
 import jakarta.persistence.EntityManager;

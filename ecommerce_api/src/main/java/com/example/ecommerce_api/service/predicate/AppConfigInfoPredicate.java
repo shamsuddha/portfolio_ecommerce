@@ -2,6 +2,9 @@ package com.example.ecommerce_api.service.predicate;
 
 import com.querydsl.core.BooleanBuilder;
 import com.querydsl.core.types.Predicate;
+
+import com.example.ecommerce_api.entity.QAppConfigInfo;
+
 import com.example.ecommerce_api.controller.request_dto.AppConfigInfoSearchDto;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.util.CollectionUtils;

@@ -2,8 +2,8 @@ package com.example.ecommerce_api.service.predicate;
 
 import com.querydsl.core.BooleanBuilder;
 import com.querydsl.core.types.Predicate;
-import io.hms.api.controller.request_dto.BookingReceivableSearchDto;
-import io.hms.api.entity.QBookingReceivable;
+import com.example.ecommerce_api.controller.request_dto.BookingReceivableSearchDto;
+import com.example.ecommerce_api.entity.QBookingReceivable;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.util.CollectionUtils;
 

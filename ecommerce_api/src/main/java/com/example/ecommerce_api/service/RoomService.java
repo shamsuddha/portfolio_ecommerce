@@ -1,6 +1,8 @@
 package com.example.ecommerce_api.service;
 
 import com.example.ecommerce_api.controller.request_dto.RoomSearchDto;
+import com.example.ecommerce_api.entity.QRoom;
+import com.example.ecommerce_api.entity.QRoomRateDetail;
 import com.example.ecommerce_api.entity.Room;
 import com.example.ecommerce_api.repository.RoomRepository;
 import com.example.ecommerce_api.service.common.EntityValidationService;
@@ -15,7 +17,9 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import java.util.List;
-import static com.example.ecommerce_api.service.predicate.RoomRateTypePredicate.makePredicate;
+
+import static com.example.ecommerce_api.service.predicate.RoomPredicate.makePredicate;
+
 @Service
 @AllArgsConstructor
 public class RoomService {

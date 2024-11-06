@@ -1,6 +1,7 @@
 package com.example.ecommerce_api.service.predicate;
 
 import com.example.ecommerce_api.controller.request_dto.BedSearchDto;
+import com.example.ecommerce_api.entity.QBed;
 import com.querydsl.core.BooleanBuilder;
 import com.querydsl.core.types.Predicate;
 import org.apache.commons.lang3.StringUtils;

@@ -2,11 +2,8 @@ package com.example.ecommerce_api.service.predicate;
 
 import com.querydsl.core.BooleanBuilder;
 import com.querydsl.core.types.Predicate;
-import io.hms.api.controller.request_dto.CouponSearchDto;
-import io.hms.api.controller.request_dto.RoomSearchDto;
-import io.hms.api.entity.QCoupon;
-import io.hms.api.entity.QRoom;
-import io.hms.api.entity.QRoomCategory;
+import com.example.ecommerce_api.controller.request_dto.CouponSearchDto;
+import com.example.ecommerce_api.entity.QCoupon;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.util.CollectionUtils;
 

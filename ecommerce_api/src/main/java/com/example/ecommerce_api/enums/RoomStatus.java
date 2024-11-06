@@ -1,6 +1,6 @@
 package com.example.ecommerce_api.enums;
 
-import io.hms.api.exception.InvalidEnumValueException;
+import com.example.ecommerce_api.exception.InvalidEnumValueException;
 
 public enum RoomStatus {
 

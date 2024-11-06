@@ -2,16 +2,14 @@ package com.example.ecommerce_api.service.predicate;
 
 import com.querydsl.core.BooleanBuilder;
 import com.querydsl.core.types.Predicate;
-import io.hms.api.controller.request_dto.CountrySearchDto;
-import io.hms.api.controller.request_dto.RoomSearchDto;
-import io.hms.api.entity.QCountry;
-import io.hms.api.entity.QRoom;
-import io.hms.api.entity.QRoomCategory;
+import com.example.ecommerce_api.controller.request_dto.CountrySearchDto;
+import com.example.ecommerce_api.controller.request_dto.RoomSearchDto;
+import com.example.ecommerce_api.entity.QCountry;
+
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.util.CollectionUtils;
 
 public class CountryPredicate {
-
 
   private static final QCountry qCountry = QCountry.country;
 
