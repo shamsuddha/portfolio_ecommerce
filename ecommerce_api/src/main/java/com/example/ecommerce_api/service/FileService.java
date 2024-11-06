@@ -1,13 +1,13 @@
 package com.example.ecommerce_api.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import io.hms.api.common.FileUtil;
-import io.hms.api.dto.FileInfoDto;
-import io.hms.api.entity.FileInfo;
-import io.hms.api.enums.FileType;
-import io.hms.api.exception.UserInformException;
-import io.hms.api.repository.FileInfoRepository;
-import io.hms.api.service.transform.FileServiceTransform;
+import com.example.ecommerce_api.common.FileUtil;
+import com.example.ecommerce_api.dto.FileInfoDto;
+import com.example.ecommerce_api.entity.FileInfo;
+import com.example.ecommerce_api.enums.FileType;
+import com.example.ecommerce_api.exception.UserInformException;
+import com.example.ecommerce_api.repository.FileInfoRepository;
+import com.example.ecommerce_api.service.transform.FileServiceTransform;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.Resource;

@@ -2,11 +2,11 @@ package com.example.ecommerce_api.service.predicate;
 
 import com.querydsl.core.BooleanBuilder;
 import com.querydsl.core.types.Predicate;
-import io.hms.api.controller.request_dto.RoomFeatureTemplateDetailSearchDto;
-import io.hms.api.controller.request_dto.RoomSearchDto;
-import io.hms.api.entity.QRoomFeatureTemplateDetail;
-import io.hms.api.entity.QRoom;
-import io.hms.api.entity.QRoomCategory;
+import com.example.ecommerce_api.controller.request_dto.RoomFeatureTemplateDetailSearchDto;
+import com.example.ecommerce_api.controller.request_dto.RoomSearchDto;
+import com.example.ecommerce_api.entity.QRoomFeatureTemplateDetail;
+import com.example.ecommerce_api.entity.QRoom;
+import com.example.ecommerce_api.entity.QRoomCategory;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.util.CollectionUtils;
 

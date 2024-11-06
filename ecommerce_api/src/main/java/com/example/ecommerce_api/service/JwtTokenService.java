@@ -1,11 +1,11 @@
 package com.example.ecommerce_api.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.hms.api.dto.AuthExtInfoDto;
-import io.hms.api.entity.Admin;
-import io.hms.api.entity.GuestInfo;
-import io.hms.api.entity.Role;
-import io.hms.api.exception.UserInformException;
+import com.example.ecommerce_api.dto.AuthExtInfoDto;
+import com.example.ecommerce_api.entity.Admin;
+import com.example.ecommerce_api.entity.GuestInfo;
+import com.example.ecommerce_api.entity.Role;
+import com.example.ecommerce_api.exception.UserInformException;
 import io.jsonwebtoken.*;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.Authentication;

@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.ecommerce_api.controller.request_dto.LoginInfoDto;
+import com.example.ecommerce_api.service.AuthService;
+
 import java.util.Objects;
 
 @RestController

@@ -9,8 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.multipart.MultipartFile;
-
-
+import com.example.ecommerce_api.dto.FileInfoDto;
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;

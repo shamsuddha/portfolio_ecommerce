@@ -2,11 +2,11 @@ package com.example.ecommerce_api.service;
 
 import com.querydsl.core.types.Predicate;
 import com.querydsl.jpa.impl.JPAQuery;
-import io.hms.api.controller.request_dto.FloorSearchDto;
-import io.hms.api.entity.QFloor;
-import io.hms.api.entity.Floor;
-import io.hms.api.repository.FloorRepository;
-import io.hms.api.service.common.EntityValidationService;
+import com.example.ecommerce_api.controller.request_dto.FloorSearchDto;
+import com.example.ecommerce_api.entity.QFloor;
+import com.example.ecommerce_api.entity.Floor;
+import com.example.ecommerce_api.repository.FloorRepository;
+import com.example.ecommerce_api.service.common.EntityValidationService;
 import jakarta.persistence.EntityManager;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -15,7 +15,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import static io.hms.api.service.predicate.FloorPredicate.makePredicate;
+import static com.example.ecommerce_api.service.predicate.FloorPredicate.makePredicate;
 
 @Service
 @AllArgsConstructor

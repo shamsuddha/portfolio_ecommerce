@@ -3,11 +3,11 @@ package com.example.ecommerce_api.service;
 
 import com.querydsl.core.types.Predicate;
 import com.querydsl.jpa.impl.JPAQuery;
-import io.hms.api.controller.request_dto.CouponSearchDto;
-import io.hms.api.entity.Coupon;
-import io.hms.api.entity.QCoupon;
-import io.hms.api.repository.CouponRepository;
-import io.hms.api.service.common.EntityValidationService;
+import com.example.ecommerce_api.controller.request_dto.CouponSearchDto;
+import com.example.ecommerce_api.entity.Coupon;
+import com.example.ecommerce_api.entity.QCoupon;
+import com.example.ecommerce_api.repository.CouponRepository;
+import com.example.ecommerce_api.service.common.EntityValidationService;
 import jakarta.persistence.EntityManager;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -16,7 +16,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import static io.hms.api.service.predicate.CouponPredicate.makePredicate;
+import static com.example.ecommerce_api.service.predicate.CouponPredicate.makePredicate;
 
 @Service
 @AllArgsConstructor

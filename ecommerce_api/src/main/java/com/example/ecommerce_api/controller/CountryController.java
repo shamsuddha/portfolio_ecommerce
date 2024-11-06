@@ -1,8 +1,8 @@
 package com.example.ecommerce_api.controller;
 
-import io.hms.api.controller.request_dto.CountrySearchDto;
-import io.hms.api.entity.Country;
-import io.hms.api.service.CountryService;
+import com.example.ecommerce_api.controller.request_dto.CountrySearchDto;
+import com.example.ecommerce_api.entity.Country;
+import com.example.ecommerce_api.service.CountryService;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatusCode;

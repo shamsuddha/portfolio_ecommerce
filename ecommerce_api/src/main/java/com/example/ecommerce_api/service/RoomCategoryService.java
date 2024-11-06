@@ -3,11 +3,11 @@ package com.example.ecommerce_api.service;
 
 import com.querydsl.core.types.Predicate;
 import com.querydsl.jpa.impl.JPAQuery;
-import io.hms.api.controller.request_dto.RoomCategorySearchDto;
-import io.hms.api.entity.QRoomCategory;
-import io.hms.api.entity.RoomCategory;
-import io.hms.api.repository.RoomCategoryRepository;
-import io.hms.api.service.common.EntityValidationService;
+import com.example.ecommerce_api.controller.request_dto.RoomCategorySearchDto;
+import com.example.ecommerce_api.entity.QRoomCategory;
+import com.example.ecommerce_api.entity.RoomCategory;
+import com.example.ecommerce_api.repository.RoomCategoryRepository;
+import com.example.ecommerce_api.service.common.EntityValidationService;
 import jakarta.persistence.EntityManager;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -16,7 +16,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import static io.hms.api.service.predicate.RoomCategoryPredicate.makePredicate;
+import static com.example.ecommerce_api.service.predicate.RoomCategoryPredicate.makePredicate;
 
 @Service
 @AllArgsConstructor

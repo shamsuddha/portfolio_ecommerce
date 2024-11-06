@@ -1,7 +1,7 @@
-package io.hms.api.service.validation;
+package com.example.ecommerce_api.service.validation;
 
-import io.hms.api.controller.request_dto.LoginInfoDto;
-import io.hms.api.exception.UserInformException;
+import com.example.ecommerce_api.controller.request_dto.LoginInfoDto;
+import com.example.ecommerce_api.exception.UserInformException;
 import lombok.AllArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;

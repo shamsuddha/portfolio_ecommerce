@@ -1,18 +1,16 @@
 package com.example.ecommerce_api.service;
 
 import com.querydsl.jpa.impl.JPAQuery;
-import io.hms.api.controller.request_dto.LoginInfoDto;
-import io.hms.api.entity.*;
-import io.hms.api.exception.UserInformException;
-import io.hms.api.service.validation.AuthValidationService;
+import com.example.ecommerce_api.controller.request_dto.LoginInfoDto;
+import com.example.ecommerce_api.entity.*;
+import com.example.ecommerce_api.exception.UserInformException;
+import com.example.ecommerce_api.service.validation.AuthValidationService;
 import jakarta.persistence.EntityManager;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Objects;
-
-import static io.hms.api.entity.QAdmin.admin;
 
 @Service
 @AllArgsConstructor

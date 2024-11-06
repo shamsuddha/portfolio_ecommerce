@@ -1,10 +1,12 @@
-package io.hms.api.service.transform;
+package com.example.ecommerce_api.service.transform;
 
-import io.hms.api.dto.FileInfoDto;
-import io.hms.api.entity.FileInfo;
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+
+import com.example.ecommerce_api.dto.FileInfoDto;
+import com.example.ecommerce_api.entity.FileInfo;
 
 @Service
 @Slf4j

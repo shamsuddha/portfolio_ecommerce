@@ -3,9 +3,9 @@ package com.example.ecommerce_api.controller;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import io.hms.api.dto.FileInfoDto;
-import io.hms.api.enums.FileType;
-import io.hms.api.service.FileService;
+import com.example.ecommerce_api.dto.FileInfoDto;
+import com.example.ecommerce_api.enums.FileType;
+import com.example.ecommerce_api.service.FileService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatusCode;

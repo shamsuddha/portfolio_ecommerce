@@ -1,8 +1,8 @@
 package com.example.ecommerce_api.controller;
 
-import io.hms.api.controller.request_dto.BedSearchDto;
-import io.hms.api.entity.Bed;
-import io.hms.api.service.BedService;
+import com.example.ecommerce_api.controller.request_dto.BedSearchDto;
+import com.example.ecommerce_api.entity.Bed;
+import com.example.ecommerce_api.service.BedService;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatusCode;

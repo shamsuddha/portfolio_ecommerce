@@ -1,9 +1,8 @@
 package com.example.ecommerce_api.controller;
 
-import io.hms.api.controller.request_dto.BookingSearchDto;
-import io.hms.api.entity.Booking;
-import io.hms.api.service.BookingService;
-import io.hms.api.service.BookingService;
+import com.example.ecommerce_api.controller.request_dto.BookingSearchDto;
+import com.example.ecommerce_api.entity.Booking;
+import com.example.ecommerce_api.service.BookingService;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatusCode;

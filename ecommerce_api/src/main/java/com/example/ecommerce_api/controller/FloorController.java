@@ -1,8 +1,8 @@
 package com.example.ecommerce_api.controller;
 
-import io.hms.api.controller.request_dto.FloorSearchDto;
-import io.hms.api.entity.Floor;
-import io.hms.api.service.FloorService;
+import com.example.ecommerce_api.controller.request_dto.FloorSearchDto;
+import com.example.ecommerce_api.entity.Floor;
+import com.example.ecommerce_api.service.FloorService;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatusCode;

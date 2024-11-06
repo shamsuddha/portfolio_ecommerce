@@ -1,8 +1,8 @@
 package com.example.ecommerce_api.controller;
 
-import io.hms.api.controller.request_dto.ComplainSearchDto;
-import io.hms.api.entity.Complain;
-import io.hms.api.service.ComplainService;
+import com.example.ecommerce_api.controller.request_dto.ComplainSearchDto;
+import com.example.ecommerce_api.entity.Complain;
+import com.example.ecommerce_api.service.ComplainService;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatusCode;

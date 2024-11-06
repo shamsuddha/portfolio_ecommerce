@@ -2,8 +2,8 @@ package com.example.ecommerce_api.service.predicate;
 
 import com.querydsl.core.BooleanBuilder;
 import com.querydsl.core.types.Predicate;
-import io.hms.api.controller.request_dto.NotificationSearchDto;
-import io.hms.api.entity.QNotification;
+import com.example.ecommerce_api.controller.request_dto.NotificationSearchDto;
+import com.example.ecommerce_api.entity.QNotification;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.util.CollectionUtils;
 

@@ -1,9 +1,8 @@
 package com.example.ecommerce_api.service.predicate;
 
+import com.example.ecommerce_api.controller.request_dto.BedSearchDto;
 import com.querydsl.core.BooleanBuilder;
 import com.querydsl.core.types.Predicate;
-import io.hms.api.controller.request_dto.BedSearchDto;
-import io.hms.api.entity.QBed;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.util.CollectionUtils;
 

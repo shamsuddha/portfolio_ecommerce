@@ -2,12 +2,12 @@ package com.example.ecommerce_api.service;
 
 import com.querydsl.core.types.Predicate;
 import com.querydsl.jpa.impl.JPAQuery;
-import io.hms.api.controller.request_dto.GuestInfoLoginDto;
-import io.hms.api.controller.request_dto.GuestInfoSearchDto;
-import io.hms.api.entity.GuestInfo;
-import io.hms.api.entity.QGuestInfo;
-import io.hms.api.repository.GuestInfoRepository;
-import io.hms.api.service.common.EntityValidationService;
+import com.example.ecommerce_api.controller.request_dto.GuestInfoLoginDto;
+import com.example.ecommerce_api.controller.request_dto.GuestInfoSearchDto;
+import com.example.ecommerce_api.entity.GuestInfo;
+import com.example.ecommerce_api.entity.QGuestInfo;
+import com.example.ecommerce_api.repository.GuestInfoRepository;
+import com.example.ecommerce_api.service.common.EntityValidationService;
 import jakarta.persistence.EntityManager;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -16,7 +16,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import static io.hms.api.service.predicate.GuestInfoPredicate.makePredicate;
+import static com.example.ecommerce_api.service.predicate.GuestInfoPredicate.makePredicate;
 
 @Service
 @AllArgsConstructor

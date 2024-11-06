@@ -1,8 +1,8 @@
 package com.example.ecommerce_api.controller;
 
-import io.hms.api.controller.request_dto.NotificationSearchDto;
-import io.hms.api.entity.Notification;
-import io.hms.api.service.NotificationService;
+import com.example.ecommerce_api.controller.request_dto.NotificationSearchDto;
+import com.example.ecommerce_api.entity.Notification;
+import com.example.ecommerce_api.service.NotificationService;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatusCode;

@@ -1,10 +1,10 @@
 package com.example.ecommerce_api.controller;
 
-import io.hms.api.controller.request_dto.CountrySearchDto;
-import io.hms.api.controller.request_dto.RoomSearchDto;
-import io.hms.api.entity.Country;
-import io.hms.api.entity.Room;
-import io.hms.api.service.RoomService;
+import com.example.ecommerce_api.controller.request_dto.CountrySearchDto;
+import com.example.ecommerce_api.controller.request_dto.RoomSearchDto;
+import com.example.ecommerce_api.entity.Country;
+import com.example.ecommerce_api.entity.Room;
+import com.example.ecommerce_api.service.RoomService;
 import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;

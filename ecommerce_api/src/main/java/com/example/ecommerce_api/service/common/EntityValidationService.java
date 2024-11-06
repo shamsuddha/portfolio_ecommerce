@@ -1,6 +1,6 @@
 package com.example.ecommerce_api.service.common;
 
-import com.example.ecommerce_api.api.entity.*;
+import com.example.ecommerce_api.entity.*;
 import com.example.ecommerce_api.exception.UserInformException;
 import com.example.ecommerce_api.repository.*;
 import lombok.RequiredArgsConstructor;

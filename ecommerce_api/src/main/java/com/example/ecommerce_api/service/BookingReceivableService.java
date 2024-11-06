@@ -3,11 +3,11 @@ package com.example.ecommerce_api.service;
 
 import com.querydsl.core.types.Predicate;
 import com.querydsl.jpa.impl.JPAQuery;
-import io.hms.api.controller.request_dto.BookingReceivableSearchDto;
-import io.hms.api.entity.BookingReceivable;
-import io.hms.api.entity.QBookingReceivable;
-import io.hms.api.repository.BookingReceivableRepository;
-import io.hms.api.service.common.EntityValidationService;
+import com.example.ecommerce_api.controller.request_dto.BookingReceivableSearchDto;
+import com.example.ecommerce_api.entity.BookingReceivable;
+import com.example.ecommerce_api.entity.QBookingReceivable;
+import com.example.ecommerce_api.repository.BookingReceivableRepository;
+import com.example.ecommerce_api.service.common.EntityValidationService;
 import jakarta.persistence.EntityManager;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
@@ -16,7 +16,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import static io.hms.api.service.predicate.BookingReceivablePredicate.makePredicate;
+import static com.example.ecommerce_api.service.predicate.BookingReceivablePredicate.makePredicate;
 
 @Service
 @AllArgsConstructor

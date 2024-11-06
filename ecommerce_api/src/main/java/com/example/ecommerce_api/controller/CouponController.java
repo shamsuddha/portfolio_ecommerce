@@ -1,8 +1,8 @@
 package com.example.ecommerce_api.controller;
 
-import io.hms.api.controller.request_dto.CouponSearchDto;
-import io.hms.api.entity.Coupon;
-import io.hms.api.service.CouponService;
+import com.example.ecommerce_api.controller.request_dto.CouponSearchDto;
+import com.example.ecommerce_api.entity.Coupon;
+import com.example.ecommerce_api.service.CouponService;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatusCode;

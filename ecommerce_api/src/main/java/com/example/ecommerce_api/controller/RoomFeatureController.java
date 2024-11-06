@@ -1,8 +1,8 @@
 package com.example.ecommerce_api.controller;
 
-import io.hms.api.controller.request_dto.RoomFeatureSearchDto;
-import io.hms.api.entity.RoomFeature;
-import io.hms.api.service.RoomFeatureService;
+import com.example.ecommerce_api.controller.request_dto.RoomFeatureSearchDto;
+import com.example.ecommerce_api.entity.RoomFeature;
+import com.example.ecommerce_api.service.RoomFeatureService;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatusCode;

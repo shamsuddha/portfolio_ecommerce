@@ -1,8 +1,8 @@
 package com.example.ecommerce_api.controller;
 
 
-import io.hms.api.exception.UserInformException;
-import io.hms.api.service.FileService;
+import com.example.ecommerce_api.exception.UserInformException;
+import com.example.ecommerce_api.service.FileService;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;

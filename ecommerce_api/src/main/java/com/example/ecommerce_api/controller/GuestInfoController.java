@@ -1,9 +1,9 @@
 package com.example.ecommerce_api.controller;
 
-import io.hms.api.controller.request_dto.GuestInfoLoginDto;
-import io.hms.api.controller.request_dto.GuestInfoSearchDto;
-import io.hms.api.entity.GuestInfo;
-import io.hms.api.service.GuestInfoService;
+import com.example.ecommerce_api.controller.request_dto.GuestInfoLoginDto;
+import com.example.ecommerce_api.controller.request_dto.GuestInfoSearchDto;
+import com.example.ecommerce_api.entity.GuestInfo;
+import com.example.ecommerce_api.service.GuestInfoService;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatusCode;
