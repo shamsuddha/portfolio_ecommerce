@@ -1,6 +1,5 @@
 package com.example.ecommerce_api.dto;
 
-
 import lombok.*;
 import lombok.experimental.Accessors;
 
@@ -12,9 +11,9 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 public class AuthExtInfoDto {
 
-  private String userType; // customer  admin
+    private String userType; // customer admin
 
-  private String organizationId;
-  private String organizationName;
+    private String organizationId;
+    private String organizationName;
 
 }

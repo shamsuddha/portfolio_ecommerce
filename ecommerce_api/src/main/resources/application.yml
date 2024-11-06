@@ -1,5 +1,6 @@
 server:
-  port: 8080
+  port: 9999
+
 spring:
   jpa:
     open-in-view: false
@@ -29,12 +30,7 @@ spring:
     name: postgres
     username: postgres
     password: 123456
-    # jdbc:postgresql://localhost:9072/db1?user=user1&password=password1
-    #    driver-class-name: com.mysql.cj.jdbc.Driver
-    #    url: jdbc:mysql://localhost:3306/db1
-    #    name: ee
-    #    username: root
-    #    password: root
+    # jdbc:postgresql://localhost:7070/db1?user=user1&password=password1
 
     hikari:
       connection-timeout: 60000
@@ -58,5 +54,11 @@ logging:
         web:
           filter:
             CommonsRequestLoggingFilter: DEBUG
+
 #logging.level.org.springframework=TRACE
 
+
+app:
+  root_path: /home/shaiful/Public/software_workspace/hotel_erp/hotel_files/
+
+jwt_secret_key: Shaiful_is_building_jwt_token_with_this_@super_awesome_secret_in_July_2024
