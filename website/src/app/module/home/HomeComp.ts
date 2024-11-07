@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {MatTabsModule} from '@angular/material/tabs';
+import { CarouselSliderComp } from "./carousel_slider/CarouselSliderComp";
 
 
 export interface PhotosApi {
@@ -17,7 +18,7 @@ export interface PhotosApi {
   templateUrl: './HomeComp.html',
   styleUrls: ['./HomeComp.scss'],
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MatTabsModule],
+  imports: [CommonModule, RouterOutlet, MatTabsModule, CarouselSliderComp],
   providers: [],
 })
 export class HomeComp implements OnInit {

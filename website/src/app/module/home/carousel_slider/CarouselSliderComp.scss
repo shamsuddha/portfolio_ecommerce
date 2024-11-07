@@ -1,0 +1,66 @@
+/* Slider Container */
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 520px;
+}
+
+/* Slides Wrapper */
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    /* Smooth sliding transition */
+}
+
+/* Individual Slide */
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Caption on each slide */
+.caption {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    color: white;
+}
+
+.caption h2 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.caption p {
+    font-size: 24px;
+}
+
+/* Navigation Buttons */
+.prev-slide,
+.next-slide {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev-slide {
+    left: 10px;
+}
+
+.next-slide {
+    right: 10px;
+}
