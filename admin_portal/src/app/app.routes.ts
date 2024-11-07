@@ -14,16 +14,7 @@ export const routeList: Route[] = [
       {
         path: 'dashboard',
         loadComponent: () => import('./module/authenticated/dashboard/DashboardComp').then(m => m.DashboardComp)
-      },
-      
-      {
-        path: 'floor-setup',
-        loadComponent: () => import('./module/authenticated/floor_setup/FloorSetupComp').then(m => m.FloorSetupComp)
-      },
-      {
-        path: 'bed-setup',
-        loadComponent: () => import('./module/authenticated/bed_setup/BedSetupComp').then(m => m.BedSetupComp)
-      }     
+      },     
     ]
   }
 
