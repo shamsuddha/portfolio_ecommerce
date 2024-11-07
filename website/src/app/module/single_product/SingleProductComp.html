@@ -2,36 +2,23 @@
   <div class="row">
     <div class="col-md-4">
       <div class="col-12 d-flex justify-content-center">
-        <img
-          src="https://placehold.co/400x500/grey/white"
-          class="img-fluid"
-          alt="Product Image"
-        />
+          <div class="main-image">
+              <img [src]="images[currentIndex]" class="img-fluid fade" alt="Product Image" />
+              <button class="carousel-control-prev" type="button" (click)="prev()">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"><</span>
+              </button>
+              <button class="carousel-control-next" type="button" (click)="next()">
+                  <span class="carousel-control-next-icon" aria-hidden="true">></span>
+              </button>
+          </div>
       </div>
       <div class="row mt-2 d-flex justify-content-center">
-        <div class="col">
-          <img
-            src="https://placehold.co/120x150/grey/white"
-            class="img-fluid p-0 m-0"
-            alt="Product Image"
-          />
-        </div>
-        <div class="col">
-          <img
-          src="https://placehold.co/120x150/grey/white"
-            class="img-fluid p-0 m-0"
-            alt="Product Image"
-          />
-        </div>
-        <div class="col">
-          <img
-          src="https://placehold.co/120x150/grey/white"
-            class="img-fluid p-0 m-0"
-            alt="Product Image"
-          />
-        </div>
-      </div>
-    </div>
+          <div class="col" *ngFor="let img of images; let i = index">
+              <img [src]="img" (click)="selectImage(i)" [class.active]="i === currentIndex"
+              class="img-fluid img-thumbnail" />
+          </div>
+      </div>     
+  </div>
     <div class="col-md-5 pt-3 pt-lg-0">
       <div class="product-details">
         <p class="border-bottom text-secondary d-flex justify-content-center justify-content-lg-start">
