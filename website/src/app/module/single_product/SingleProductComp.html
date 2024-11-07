@@ -32,19 +32,17 @@
         </div>
       </div>
     </div>
-    <div class="col-md-5">
+    <div class="col-md-5 pt-3 pt-lg-0">
       <div class="product-details">
-        <p class="border-bottom text-secondary text-lg-start text-sm-center">
+        <p class="border-bottom text-secondary d-flex justify-content-center justify-content-lg-start">
           0 total orders | 42 times viewed
         </p>
         <h3>Candy Red Solid T-shirt</h3>
         <div class="mb-3 mt-1">
           <span class="bg-primary text-light m-1 p-1 rounded">
-            Dining Cover</span
-          >
+            Dining Cover</span>
           <span class="bg-secondary text-light m-1 p-1 rounded">
-            Chinese Dining Cover</span
-          >
+            Chinese Dining Cover</span>
         </div>
         <div class="mb-3 mt-2">
           <span>Product Rating (0 of 5)</span><br />
@@ -53,12 +51,10 @@
         <div class="mt-2 d-flex">
           <h4 class="text-success mx-1">$45.00</h4>
           <span class="text-muted text-decoration-line-through m-1"
-            >2,700 BDT</span
-          >
+            >$27.00</span>
         </div>
         <div>
-          <h6>Short Description:</h6>
-          <p>
+          <p><strong>Short Description:</strong>          
             Chinese Print Chair Cover 6pcs, Chinese Print Chair Cover 6 pcs.
             Chinese Print Chair Cover 6 pcs
           </p>
@@ -66,7 +62,7 @@
         <!-- Size Selection -->
         <div class="mb-3">
           <label for="sizeSelect" class="form-label">
-            Select Size : {{selectedSize || "No size selected"}}
+            <strong>Select Size</strong>  : {{selectedSize || "No size selected"}}
           </label>
           <br />
           <button
@@ -102,7 +98,7 @@
         </div>
         <div class="mb-3">
           <label for="sizeSelect" class="form-label"
-            >Select Color : {{selectedColor || "No color selected"}}</label
+            > <strong>Select Color: </strong>  : {{selectedColor || "No color selected"}}</label
           >
           <br />
           <button
