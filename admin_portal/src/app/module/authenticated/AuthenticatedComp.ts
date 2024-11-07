@@ -194,5 +194,4 @@ export class AuthenticatedComp implements OnInit{
     }
   }
 
-
 }

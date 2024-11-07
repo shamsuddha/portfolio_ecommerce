@@ -1,8 +1,7 @@
-import {prop,} from '@rxweb/reactive-form-validators';
-import {AuditLog} from "./AuditLog";
+import { prop, } from '@rxweb/reactive-form-validators';
+import { AuditLog } from "./AuditLog";
 
-
-export class Employee extends AuditLog{
+export class Employee extends AuditLog {
 
   @prop() id: number | null = null;
   @prop() name: string | null = null;

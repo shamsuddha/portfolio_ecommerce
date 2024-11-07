@@ -7,6 +7,8 @@ export const routeList: Route[] = [
 
   { path: 'login', loadComponent: () => import('./module/login/AdminLoginComp').then(m => m.AdminLoginComp) },
 
+  { path: '', loadComponent: () => import('./module/index/IndexComp').then(m => m.IndexComp) },
+
   {
     path: 'authenticated',
     loadComponent: () => import('./module/authenticated/AuthenticatedComp').then(m => m.AuthenticatedComp),
@@ -14,7 +16,7 @@ export const routeList: Route[] = [
       {
         path: 'dashboard',
         loadComponent: () => import('./module/authenticated/dashboard/DashboardComp').then(m => m.DashboardComp)
-      },     
+      },
     ]
   }
 
