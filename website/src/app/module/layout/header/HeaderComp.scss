@@ -35,7 +35,7 @@
 .search-container .btn {
   padding: 16px 15px;
   border: none;
-  background-color: #4a90e2;
+  background-color: #0d6efd;
   color: #fff;
   display: flex;
   align-items: center;
@@ -88,8 +88,4 @@ a.nav-link:hover {
 /* Specific styling for the trigger button if needed */
 .category-button {
   width: 200px; /* Set your desired width for the trigger button */
-}
-
-::ng-deep .custom-badge .mat-badge-content {
-  background-color: #8bb8f7; /* Your custom color */
 }

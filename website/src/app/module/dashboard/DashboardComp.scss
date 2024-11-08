@@ -1,0 +1,64 @@
+  /* Custom styles */
+  .sidebar {
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    padding-top: 20px;
+}
+
+.sidebar a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+.sidebar a.active {
+    background-color: #f28b23;
+    color: white;
+    border-radius: 5px;
+}
+
+.sidebar a:hover {
+    background-color: #f28b23;
+    color: white;
+}
+
+.sidebar .logout-btn {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+.account-info {
+    padding: 20px;
+}
+
+.account-info h5 {
+    font-weight: bold;
+}
+
+.account-summary {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.account-summary div {
+    text-align: center;
+}
+
+.account-summary div h6 {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.account-summary div p {
+    margin: 0;
+    color: #f28b23;
+    font-size: 24px;
+}
+
+.edit-link {
+    color: #f28b23;
+}

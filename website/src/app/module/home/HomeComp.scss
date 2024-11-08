@@ -30,7 +30,7 @@
 }
 
 .promo-button {
-  background-color: #007bff;
+  background-color: #0866ff; ;
   color: #fff;
   border: none;
   font-size: 16px;
@@ -46,14 +46,20 @@
   align-items: center;
 }
 
+.feature-card:hover .feature-icon{
+  color: #508def;
+  font-size: 38px;
+}
+
 .feature-icon {
   font-size: 36px;
-  color: #007bff;
+  color: #0866ff;
   margin-bottom: 10px;
 }
 
 .feature-title {
   font-weight: bold;
+  font-weight: 550;
   margin-bottom: 5px;
 }
 
@@ -161,7 +167,7 @@
 }
 
 .header-buttons button.active {
-  background-color: #0056b3;
+  background-color: #0d6efd; ;
 }
 
 
@@ -195,7 +201,7 @@
 
 .hover-icons button {
   border: none;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #0866ff;
   border-radius: 50%;
   padding: 8px;
   color: white;
@@ -203,7 +209,7 @@
 }
 
 .hover-icons button:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: #1c73fe;
   transform: scale(1.1);
 }
 

@@ -3,7 +3,8 @@
     <div class="row footer-top pt-3">
       <div class="col-12 col-lg-4 text-center text-lg-start footer-section">
         <div class="logo-footer">
-          <img style="width: 90%; height: 100px;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png" alt="Logo">
+          <img style="width: 90%; height: 100px;" 
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png" alt="Logo">
         </div>
         <div class="footer-about pt-2 mt-2">
           <p class="lh-lg">
@@ -66,19 +67,33 @@
   </div>
   <nav class="mobile-nav">
     <a href="#" class="bloc-icon">
-      <i class="fa-solid fa-cart-shopping"></i>
+      <span matBadge="15" matBadgeColor="primary" class="custom-badge">
+        <i class="fa-solid fa-cart-shopping"></i>
+      </span>
     </a>
     <a href="#" class="bloc-icon">
+      <span matBadge="15" matBadgeColor="primary" class="custom-badge">
       <i class="fa-solid fa-code-compare"></i>
+    </span>
     </a>
     <a href="#" class="bloc-icon">
+      <span matBadge="15" matBadgeColor="primary" class="custom-badge">
       <i class="fa-solid fa-heart"></i>
+    </span>
     </a>
     <a href="#" class="bloc-icon">
+      <span>
       <i class="fa-solid fa-magnifying-glass"></i>
+    </span>
     </a>
     <a href="#" class="bloc-icon">
+      <span>
       <i class="fa-solid fa-user"></i>
+    </span>
     </a>
-  </nav>
+  </nav>  
+  <div id="goTopBtn" (click)="goToTop()" title="Go to top" class="rounded-50">
+    <i class="fa-solid fa-arrow-up"></i>
+  </div>
+  
 </footer>

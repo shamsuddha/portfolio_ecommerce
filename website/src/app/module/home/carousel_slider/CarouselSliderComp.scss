@@ -1,66 +1,130 @@
-/* Slider Container */
+/* Slider container */
 .slider {
     position: relative;
     width: 100%;
+    margin: 0 auto;
     overflow: hidden;
-    height: 520px;
+    max-height: 550px;
 }
 
-/* Slides Wrapper */
+/* Slides container */
 .slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    /* Smooth sliding transition */
 }
 
-/* Individual Slide */
+/* Individual slide */
 .slide {
     min-width: 100%;
-    box-sizing: border-box;
-    position: relative;
+    transition: opacity 0.5s ease-in-out;
 }
 
-.slide img {
+/* Slide image */
+img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-/* Caption on each slide */
-.caption {
-    position: absolute;
-    bottom: 50px;
-    left: 50px;
-    color: white;
-}
-
-.caption h2 {
-    font-size: 40px;
-    font-weight: bold;
-}
-
-.caption p {
-    font-size: 24px;
-}
-
-/* Navigation Buttons */
-.prev-slide,
-.next-slide {
+/* Arrows (prev and next buttons) */
+button.prev-slide,
+button.next-slide {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #0866ff;
+    /* Semi-transparent background */
     color: white;
+    /* Arrow color */
     border: none;
     padding: 10px;
     cursor: pointer;
-    z-index: 10;
+    z-index: 2;
+    font-size: 20px;
+    opacity: .8;
+    /* Initial font size for arrows */
 }
 
-.prev-slide {
+/* Positioning of the prev arrow */
+button.prev-slide {
     left: 10px;
+    /* Distance from the left edge */
 }
 
-.next-slide {
+/* Positioning of the next arrow */
+button.next-slide {
     right: 10px;
+    /* Distance from the right edge */
+}
+
+/* Hover effect on arrows */
+button:hover {
+    background-color: #508def;
+    /* Darker background on hover */
+}
+
+/* Responsive styles for tablets and larger screens */
+@media (min-width: 768px) {
+
+    button.prev-slide,
+    button.next-slide {
+        padding: 15px 20px;
+        /* Increase padding for larger screens */
+        font-size: 24px;
+        /* Increase font size for larger screens */
+    }
+
+    button.prev-slide {
+        left: 20px;
+        /* Increase left margin */
+    }
+
+    button.next-slide {
+        right: 20px;
+        /* Increase right margin */
+    }
+}
+
+/* Responsive styles for smaller screens (up to 768px) */
+@media (max-width: 768px) {
+
+    button.prev-slide,
+    button.next-slide {
+        padding: 8px 10px;
+        /* Smaller padding */
+        font-size: 18px;
+        /* Smaller font size */
+    }
+
+    button.prev-slide {
+        left: 5px;
+        /* Closer to the left */
+    }
+
+    button.next-slide {
+        right: 5px;
+        /* Closer to the right */
+    }
+}
+
+/* Responsive styles for mobile screens (up to 480px) */
+@media (max-width: 480px) {
+
+    button.prev-slide,
+    button.next-slide {
+        padding: 6px 8px;
+        /* Even smaller padding for mobile */
+        font-size: 16px;
+        /* Smaller font size for mobile */
+    }
+
+    button.prev-slide {
+        left: 5px;
+        /* Minimum left margin */
+    }
+
+    button.next-slide {
+        right: 5px;
+        /* Minimum right margin */
+    }
 }

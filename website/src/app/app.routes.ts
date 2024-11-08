@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { LayoutComp } from './module/layout/LayoutComp';
+import { DashboardComp } from './module/dashboard/DashboardComp';
 
 export const routes: Routes = [
     {
@@ -50,6 +51,20 @@ export const routes: Routes = [
             {
                 path: 'shop',
                 loadComponent: () => import('./module/shop/ShopComp').then(m => m.ShopComp)
+            },
+            {
+                path: 'dashboard',
+                component: DashboardComp,
+                children: [
+                    {
+                        path: 'home',
+                        loadComponent: () => import('./module/home/HomeComp').then(m => m.HomeComp)
+                    },
+                    {
+                        path: 'single-product',
+                        loadComponent: () => import('./module/single_product/SingleProductComp').then(m => m.SingleProductComp)
+                    },
+                ]
             }
         ]
     },
