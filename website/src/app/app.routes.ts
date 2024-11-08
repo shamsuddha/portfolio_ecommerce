@@ -4,6 +4,11 @@ import { LayoutComp } from './module/layout/LayoutComp';
 export const routes: Routes = [
     {
         path: '',
+        redirectTo: 'home',
+        pathMatch: 'full'
+    },
+    {
+        path: '',
         component: LayoutComp,
         children: [
             {
@@ -47,5 +52,9 @@ export const routes: Routes = [
                 loadComponent: () => import('./module/shop/ShopComp').then(m => m.ShopComp)
             }
         ]
+    },
+    {
+        path: '**',
+        redirectTo: 'home'
     }
 ];

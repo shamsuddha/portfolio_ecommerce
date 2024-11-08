@@ -90,7 +90,6 @@ a.nav-link:hover {
   width: 200px; /* Set your desired width for the trigger button */
 }
 
-.mat-badge
-{
-  
+::ng-deep .custom-badge .mat-badge-content {
+  background-color: #8bb8f7; /* Your custom color */
 }
