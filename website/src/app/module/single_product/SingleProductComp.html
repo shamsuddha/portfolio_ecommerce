@@ -2,23 +2,23 @@
   <div class="row">
     <div class="col-md-4">
       <div class="col-12 d-flex justify-content-center">
-          <div class="main-image">
-              <img [src]="images[currentIndex]" class="img-fluid fade" alt="Product Image" />
-              <button class="carousel-control-prev" type="button" (click)="prev()">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"><</span>
-              </button>
-              <button class="carousel-control-next" type="button" (click)="next()">
-                  <span class="carousel-control-next-icon" aria-hidden="true">></span>
-              </button>
-          </div>
+        <div class="main-image">
+          <img [src]="images[currentIndex]" class="img-fluid fade" alt="Product Image" />
+          <button class="carousel-control-prev text-white" type="button" (click)="prev()">
+            &#10094;
+          </button>
+          <button class="carousel-control-next text-white" type="button" (click)="next()">
+            &#10095;
+          </button>
+        </div>
       </div>
       <div class="row mt-2 d-flex justify-content-center">
-          <div class="col" *ngFor="let img of images; let i = index">
-              <img [src]="img" (click)="selectImage(i)" [class.active]="i === currentIndex"
-              class="img-fluid img-thumbnail" />
-          </div>
-      </div>     
-  </div>
+        <div class="col" *ngFor="let img of images; let i = index">
+          <img [src]="img" (click)="selectImage(i)" [class.active]="i === currentIndex"
+            class="img-fluid img-thumbnail" />
+        </div>
+      </div>
+    </div>
     <div class="col-md-5 pt-3 pt-lg-0">
       <div class="product-details">
         <p class="border-bottom text-secondary d-flex justify-content-center justify-content-lg-start">
@@ -37,11 +37,10 @@
         </div>
         <div class="mt-2 d-flex">
           <h4 class="text-success mx-1">$45.00</h4>
-          <span class="text-muted text-decoration-line-through m-1"
-            >$27.00</span>
+          <span class="text-muted text-decoration-line-through m-1">$27.00</span>
         </div>
         <div>
-          <p><strong>Short Description:</strong>          
+          <p><strong>Short Description:</strong>
             Chinese Print Chair Cover 6pcs, Chinese Print Chair Cover 6 pcs.
             Chinese Print Chair Cover 6 pcs
           </p>
@@ -49,90 +48,48 @@
         <!-- Size Selection -->
         <div class="mb-3">
           <label for="sizeSelect" class="form-label">
-            <strong>Select Size</strong>  : {{selectedSize || "No size selected"}}
+            <strong>Select Size</strong> : {{selectedSize || "No size selected"}}
           </label>
           <br />
-          <button
-            class="btn border-primary rounded-0 m-1"
-            (click)="selectSize('S')"
-          >
+          <button class="btn border-primary rounded-0 m-1" (click)="selectSize('S')">
             S
           </button>
-          <button
-            class="btn border-primary rounded-0 m-1"
-            (click)="selectSize('M')"
-          >
+          <button class="btn border-primary rounded-0 m-1" (click)="selectSize('M')">
             M
           </button>
-          <button
-            class="btn border-primary rounded-0 m-1"
-            (click)="selectSize('L')"
-          >
+          <button class="btn border-primary rounded-0 m-1" (click)="selectSize('L')">
             L
           </button>
-          <button
-            class="btn border-primary rounded-0 m-1"
-            (click)="selectSize('XL')"
-          >
+          <button class="btn border-primary rounded-0 m-1" (click)="selectSize('XL')">
             XL
           </button>
-          <button
-            class="btn border-primary rounded-0 m-1"
-            (click)="selectSize('XXL')"
-          >
+          <button class="btn border-primary rounded-0 m-1" (click)="selectSize('XXL')">
             XXL
           </button>
         </div>
         <div class="mb-3">
-          <label for="sizeSelect" class="form-label"
-            > <strong>Select Color: </strong>  : {{selectedColor || "No color selected"}}</label
-          >
+          <label for="sizeSelect" class="form-label"> <strong>Select Color: </strong> :
+            {{selectedColor || "No color selected"}}</label>
           <br />
-          <button
-            class="btn rounded-0 m-1"
-            (click)="selectColor('Red')"
-            style="border: 1px solid red"
-          >
+          <button class="btn rounded-0 m-1" (click)="selectColor('Red')" style="border: 1px solid red">
             Red
           </button>
-          <button
-            class="btn rounded-0 m-1"
-            (click)="selectColor('Blue')"
-            style="border: 1px solid blue"
-          >
+          <button class="btn rounded-0 m-1" (click)="selectColor('Blue')" style="border: 1px solid blue">
             Blue
           </button>
-          <button
-            class="btn rounded-0 m-1"
-            (click)="selectColor('Yellow')"
-            style="border: 1px solid yellow"
-          >
+          <button class="btn rounded-0 m-1" (click)="selectColor('Yellow')" style="border: 1px solid yellow">
             Yellow
           </button>
-          <button
-            class="btn rounded-0 m-1"
-            (click)="selectColor('Green')"
-            style="border: 1px solid green"
-          >
+          <button class="btn rounded-0 m-1" (click)="selectColor('Green')" style="border: 1px solid green">
             Green
           </button>
-          <button
-            class="btn rounded-0 m-1"
-            (click)="selectColor('Black')"
-            style="border: 1px solid black"
-          >
+          <button class="btn rounded-0 m-1" (click)="selectColor('Black')" style="border: 1px solid black">
             Black
           </button>
         </div>
         <div class="mb-3">
-          <label for="quantity" class="form-label">Quantity</label>
-          <input
-            type="number"
-            id="quantity"
-            class="form-control"
-            min="1"
-            value="1"
-          />
+          <label for="quantity" class="form-label"><strong>Quantity: </strong></label>
+          <input type="number" id="quantity" class="form-control" min="1" value="1">
         </div>
         <div class="mb-3 d-flex">
           <button class="btn btn-primary btn-custom mx-1 rounded-0">
@@ -152,14 +109,13 @@
             <li>Easy 7 days returns and exchanges</li>
           </ul>
         </div>
-
         <!-- Share -->
         <div class="mt-4">
-          <span>Share It: </span>
-          <a href="#" class="text-dark me-2"><i class="fab fa-facebook"></i></a>
-          <a href="#" class="text-dark me-2"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="text-dark me-2"><i class="fab fa-whatsapp"></i></a>
-          <a href="#" class="text-dark"><i class="fab fa-linkedin"></i></a>
+          <span> <strong> Share It: </strong> </span>
+          <a href="#" class="text-dark me-2"><i class="fab fa-facebook fs-4"></i></a>
+          <a href="#" class="text-dark me-2"><i class="fab fa-twitter fs-4"></i></a>
+          <a href="#" class="text-dark me-2"><i class="fab fa-whatsapp fs-4"></i></a>
+          <a href="#" class="text-dark"><i class="fab fa-linkedin fs-4"></i></a>
         </div>
       </div>
     </div>
@@ -177,30 +133,130 @@
       </ul>
     </div>
   </div>
-  <div class="mt-5">
-    <ul class="nav nav-tabs">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Details</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Video</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Review</a>
-      </li>
-    </ul>
-
+</div>
+<div class="container mt-4">
+  <div class="row mt-5">
     <!-- Tab Content -->
     <div class="tab-content mt-3">
-      <div class="tab-pane fade show active">
-        <p>Product details will go here...</p>
-      </div>
-      <div class="tab-pane fade">
-        <p>Product videos will go here...</p>
-      </div>
-      <div class="tab-pane fade">
-        <p>Product reviews will go here...</p>
-      </div>
+      <mat-tab-group dynamicHeight>
+        <mat-tab label="Details">
+          <div class="example-small-box mat-elevation-z4 p-1">
+            <p class="p-2">The Model is wearing a white blouse from our stylist's collection, see the image for a mock-up of what
+              the actual blouse would look like.it has text written on it in a black cursive language which looks great
+              on a white color.
+            </p>
+            <p class="p-2">
+              <strong> fabric:</strong>
+              Art silk is manufactured by synthetic fibres like rayon. It's light in weight and is soft on the skin for
+              comfort in summers.Art silk is manufactured by synthetic fibres like rayon. It's light in weight and is
+              soft on the skin for comfort in summers.
+            </p>
+            <p class="p-2">
+              <strong>size & fit:</strong>
+              The model (height 5'8") is wearing a size S
+            </p>
+            <p class="p-2">
+              <strong>Material & Care:</strong>
+              Bottom fabric: pure cotton
+            </p>
+          </div>
+        </mat-tab>
+        <mat-tab label="Video">
+          <div class="example-large-box mat-elevation-z4 d-flex justify-content-center p-3">
+            <iframe width="650" height="400" src="https://www.youtube.com/embed/FMth4MXXIOY?si=2up6Efkk-QmM8KsH" title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen></iframe>
+          </div>
+        </mat-tab>
+        <mat-tab label="Review">
+          <div class="example-large-box mat-elevation-z4">
+            <div class="row">
+              <!-- Overall Rating and Breakdown -->
+              <div class="col-md-6">
+                  <div class="overall-rating">
+                      <h2>4.00</h2>
+                      <span class="stars">★★★★☆</span>
+                      <p>Based on 25 Ratings</p>
+                  </div>
+      
+                  <div class="rating-breakdown">
+                      <h5>Review this product</h5>
+                      <p>Let other customers know what you think</p>
+                      <div class="rating-bar">
+                          <span>5 ★</span>
+                          <div class="progress w-100">
+                              <div class="progress-bar bg-success" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <span>9</span>
+                      </div>
+                      <div class="rating-bar">
+                          <span>4 ★</span>
+                          <div class="progress w-100">
+                              <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <span>7</span>
+                      </div>
+                      <div class="rating-bar">
+                          <span>3 ★</span>
+                          <div class="progress w-100">
+                              <div class="progress-bar bg-success" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <span>5</span>
+                      </div>
+                      <div class="rating-bar">
+                          <span>2 ★</span>
+                          <div class="progress w-100">
+                              <div class="progress-bar bg-warning" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <span>3</span>
+                      </div>
+                      <div class="rating-bar">
+                          <span>1 ★</span>
+                          <div class="progress w-100">
+                              <div class="progress-bar bg-danger" role="progressbar" style="width: 10%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                          <span>1</span>
+                      </div>
+                      <button class="review-button mt-3">Write Review</button>
+                  </div>
+              </div>
+      
+              <!-- User Reviews -->
+              <div class="col-md-6">
+                  <div class="user-reviews">
+                      <div class="review">
+                          <div class="user-avatar">J</div>
+                          <div class="review-details">
+                              <h4>John Due <small class="text-muted">10 Aug 2024 11:05 AM</small></h4>
+                              <p>Wow! This fashion product exceeded all my expectations! The quality of the materials is outstanding.</p>
+                              <div class="stars">★★★★☆</div>
+                          </div>
+                      </div>
+      
+                      <div class="review">
+                          <div class="user-avatar">R</div>
+                          <div class="review-details">
+                              <h4>Rhoda Mayer <small class="text-muted">10 Aug 2024 11:05 AM</small></h4>
+                              <p>Nice attention to detail in the craftsmanship. It not only looks fabulous, but feels incredibly comfortable too.</p>
+                              <div class="stars">★★★★★</div>
+                          </div>
+                      </div>
+      
+                      <div class="review">
+                          <div class="user-avatar">J</div>
+                          <div class="review-details">
+                              <h4>Jack Deo <small class="text-muted">10 Aug 2024 11:05 AM</small></h4>
+                              <p>The product boasts impressive craftsmanship, meticulous attention to detail.</p>
+                              <div class="stars">★★★★☆</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
     </div>
   </div>
 </div>

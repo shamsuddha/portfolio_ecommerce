@@ -1,9 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatTabsModule } from '@angular/material/tabs';
 import { CarouselSliderComp } from "./carousel_slider/CarouselSliderComp";
-
 
 export interface PhotosApi {
   albumId?: number;
@@ -18,7 +16,7 @@ export interface PhotosApi {
   templateUrl: './HomeComp.html',
   styleUrls: ['./HomeComp.scss'],
   standalone: true,
-  imports: [CommonModule, RouterOutlet, MatTabsModule, CarouselSliderComp],
+  imports: [CommonModule, MatTabsModule, CarouselSliderComp],
   providers: [],
 })
 export class HomeComp implements OnInit {
@@ -26,7 +24,6 @@ export class HomeComp implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-
 
   }
 }
