@@ -32,7 +32,7 @@ button.next-slide {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #0866ff;
+    background-color: #0e0f11;
     /* Semi-transparent background */
     color: white;
     /* Arrow color */
@@ -41,7 +41,7 @@ button.next-slide {
     cursor: pointer;
     z-index: 2;
     font-size: 20px;
-    opacity: .8;
+    opacity: .6;
     /* Initial font size for arrows */
 }
 
@@ -59,7 +59,7 @@ button.next-slide {
 
 /* Hover effect on arrows */
 button:hover {
-    background-color: #508def;
+    background-color: #32373e;
     /* Darker background on hover */
 }
 

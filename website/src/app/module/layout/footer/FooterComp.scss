@@ -104,7 +104,6 @@
   }
 }
 
-
 #goTopBtn {
   display: none; /* Hidden by default */
   position: fixed;
@@ -124,3 +123,7 @@
   background-color: #508def;
 }
 
+.mobile-nav
+{
+  z-index: 1200;
+}
