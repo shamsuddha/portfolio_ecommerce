@@ -1,24 +1,29 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Category } from '../entity/Category';
+import { Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class CategorySetupController {
+
+    employeeList: Array<Employee> = [];
+
     constructor(private httpClient: HttpClient) {
 
-        save(floor: Category): Observable < Category > {
-            return this.httpClient.post<Category>('http://localhost:9999/floor/save', floor);
+        save(category: Category): Observable <Category> {
+            return this.httpClient.post<Category>('http://localhost:9999/category/save', category);
         }
 
-        update(floor: Category): Observable < Category > {
-            return this.httpClient.post<Category>('http://localhost:9999/floor/update', floor);
+        update(category: Category): Observable < Category > {
+            return this.httpClient.post<Category>('http://localhost:9999/category/update', category);
         }
 
-        delete (floor: Category): Observable < boolean > {
-            return this.httpClient.post<boolean>('http://localhost:9999/floor/delete', floor)
+        delete (category: Category): Observable < boolean > {
+            return this.httpClient.post<boolean>('http://localhost:9999/category/delete', category)
         }
 
-        search(floorSearchDto: CategorySearchDto): Observable < Page < Category >> {
-            return this.httpClient.post<Page<Category>>('http://localhost:9999/floor/search', floorSearchDto);
+        search(categorySearchDto: CategorySearchDto): Observable < Page < Category >> {
+            return this.httpClient.post<Page<Category>>('http://localhost:9999/category/search', categorySearchDto);
         }
 
 

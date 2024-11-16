@@ -17,6 +17,10 @@ export const routeList: Route[] = [
         path: 'dashboard',
         loadComponent: () => import('./module/authenticated/dashboard/DashboardComp').then(m => m.DashboardComp)
       },
+      {
+        path: 'category',
+        loadComponent: () => import('./module/authenticated/category_setup/CategorySetupComp').then(m => m.CategorySetupComp)
+      },
     ]
   }
 
