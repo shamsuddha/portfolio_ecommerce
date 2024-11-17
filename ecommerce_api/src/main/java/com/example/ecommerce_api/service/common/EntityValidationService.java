@@ -14,6 +14,7 @@ public class EntityValidationService {
 
     private final BedRepository bedRepository;
     private final CategoryRepository categoryRepository;
+    private final SubCategoryRepository subcategoryRepository;
 
     public Bed validateBed(String id) {
         Objects.requireNonNull(id);
@@ -27,6 +28,13 @@ public class EntityValidationService {
         return categoryRepository.findById(id)
                 .orElseThrow(() -> new UserInformException(String
                         .format("Category not found with id: [%s]", id)));
+    }
+
+    public SubCategory validateSubCategory(String id) {
+        Objects.requireNonNull(id);
+        return subcategoryRepository.findById(id)
+                .orElseThrow(() -> new UserInformException(String
+                        .format("SubCategory not found with id: [%s]", id)));
     }
 
 }

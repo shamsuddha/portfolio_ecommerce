@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 @AllArgsConstructor
 public class BedController {
 
-
   private final BedService roomService;
 
   @PostMapping("/save")
