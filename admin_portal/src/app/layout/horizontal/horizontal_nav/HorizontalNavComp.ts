@@ -4,7 +4,6 @@ import {HorizontalNav} from './HorizontalNav';
 import {LAYOUT_MODE} from "../../layouts.model";
 import {EventService} from "../../../service/EventService";
 import {AuthenticationService} from "../../../service/AuthenticationService";
-import {FakeAuthenticationService} from "../../../service/FakeAuthenticationService";
 
 @Component({
   selector: 'HorizontalNavComp',
@@ -35,7 +34,6 @@ export class HorizontalNavComp implements OnInit, AfterViewInit {
     private router: Router,
     private eventService: EventService,
     private authService: AuthenticationService,
-    private fakeAuthenticationService: FakeAuthenticationService,
   ) {
     router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {

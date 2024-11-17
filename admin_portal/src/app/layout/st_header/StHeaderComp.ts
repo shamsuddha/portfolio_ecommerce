@@ -2,7 +2,6 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { LAYOUT_MODE } from "../layouts.model";
 import { EventService } from "../../service/EventService";
-import { FakeAuthenticationService } from "../../service/FakeAuthenticationService";
 
 @Component({
   selector: 'StHeaderComp',
@@ -20,7 +19,6 @@ export class StHeaderComp implements OnInit {
 
   constructor(
     private router: Router,
-    private fakeAuthenticationService: FakeAuthenticationService,
     private eventService: EventService
   ) {
   }
@@ -71,9 +69,9 @@ export class StHeaderComp implements OnInit {
     this.settingsButtonClicked.emit();
   }
 
-  logout() {
-    this.fakeAuthenticationService.logout();
-    this.router.navigate(['/account/login']);
-  }
+  // logout() {
+  //   this.fakeAuthenticationService.logout();
+  //   this.router.navigate(['/account/login']);
+  // }
 
 }

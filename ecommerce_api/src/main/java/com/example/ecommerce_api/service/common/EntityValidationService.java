@@ -13,12 +13,20 @@ import java.util.Objects;
 public class EntityValidationService {
 
     private final BedRepository bedRepository;
+    private final CategoryRepository categoryRepository;
 
     public Bed validateBed(String id) {
         Objects.requireNonNull(id);
         return bedRepository.findById(id)
                 .orElseThrow(() -> new UserInformException(String
                         .format("Bed not found with id: [%s]", id)));
+    }
+
+    public Category validateCategory(String id) {
+        Objects.requireNonNull(id);
+        return categoryRepository.findById(id)
+                .orElseThrow(() -> new UserInformException(String
+                        .format("Category not found with id: [%s]", id)));
     }
 
 }

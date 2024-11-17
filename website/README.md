@@ -1,26 +1,27 @@
-this is website portal
+# Website
 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
 
-0. Mobile Drawyer menu
-1. Dashboard, Wishlist, compare page desin
-2. Customer order details page design
-3. Profile Page design
-4. 
-5. header icon change (cart, wishlist, compare) (done)
-6. add categorylist in menu 
-7. make image slider in home page with angular (done)
-8. make new products and feaured products 16 (done)
-9. remove multicart form everywhere (done)
-10. shop and category page 16 ta item (done)
-11. pagination
-12. cart page a update button (done)
-13. shop page a old price add kora (done)
-14. price range double slider
-15. single product page e slider add kora (done)
-16. details, video, review tab working condition
-17. user dashboard and order view
-18. check every page responsiveness
-19. go to top button add kora (done)
-20. single page e select color hover korle background e oi color hobe 
-21. single page e related products
-22. 
+## Development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

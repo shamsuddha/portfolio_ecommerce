@@ -4,11 +4,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.example.ecommerce_api.dto.AuthExtInfoDto;
 import com.example.ecommerce_api.entity.Admin;
 import com.example.ecommerce_api.entity.GuestInfo;
-import com.example.ecommerce_api.entity.Role;
 import com.example.ecommerce_api.exception.UserInformException;
 import io.jsonwebtoken.*;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;

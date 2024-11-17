@@ -1,0 +1,33 @@
+POST http://localhost:9999/category/save
+Content-Type: application/json
+
+{
+  "name": "category 2"
+}
+
+###
+POST http://localhost:9999/category/update
+Content-Type: application/json
+
+{
+  "id": "6c68ff14-9308-41db-855c-3e30d2033ad2",
+  "name": "category 101dd00"
+}
+
+###
+POST http://localhost:9999/category/delete
+Content-Type: application/json
+
+{
+  "id": "5e260248-8ce1-416c-870a-e038ed7f23c3"
+}
+
+###
+POST http://localhost:9999/category/search
+Content-Type: application/json
+
+{
+  "idList": [],
+  "page": 0,
+  "size": 10
+}

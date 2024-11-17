@@ -5,7 +5,7 @@ export const routeList: Route[] = [
 
   { path: '', loadComponent: () => import('./module/index/IndexComp').then(m => m.IndexComp) },
 
-  { path: 'login', loadComponent: () => import('./module/login/AdminLoginComp').then(m => m.AdminLoginComp) },
+  // { path: 'login', loadComponent: () => import('./module/login/AdminLoginComp').then(m => m.AdminLoginComp) },
 
   { path: '', loadComponent: () => import('./module/index/IndexComp').then(m => m.IndexComp) },
 
@@ -21,6 +21,27 @@ export const routeList: Route[] = [
         path: 'category',
         loadComponent: () => import('./module/authenticated/category_setup/CategorySetupComp').then(m => m.CategorySetupComp)
       },
+      {
+        path: 'sub-category',
+        loadComponent: () => import('./module/authenticated/subcategory_setup/SubCategorySetupComp').then(m => m.SubCategorySetupComp)
+      },
+      {
+        path: 'brand',
+        loadComponent: () => import('./module/authenticated/brand_setup/BrandSetupComp').then(m => m.BrandSetupComp)
+      },     
+      {
+        path: 'model',
+        loadComponent: () => import('./module/authenticated/model_setup/ModelSetupComp').then(m => m.ModelSetupComp)
+      },
+      {
+        path: 'product',
+        loadComponent: () => import('./module/authenticated/product_setup/ProductSetupComp').then(m => m.ProductSetupComp)
+      },
+      {
+        path: 'unit',
+        loadComponent: () => import('./module/authenticated/unit_setup/UnitSetupComp').then(m => m.UnitSetupComp)
+      },
+
     ]
   }
 
