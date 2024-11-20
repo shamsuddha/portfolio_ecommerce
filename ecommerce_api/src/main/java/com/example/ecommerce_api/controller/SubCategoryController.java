@@ -9,9 +9,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.ecommerce_api.controller.request_dto.CategorySearchDto;
+import com.example.ecommerce_api.controller.request_dto.SubCategorySearchDto;
 import com.example.ecommerce_api.entity.Category;
 import com.example.ecommerce_api.entity.SubCategory;
 import com.example.ecommerce_api.service.CategoryService;
+import com.example.ecommerce_api.service.SubCategoryService;
 
 import lombok.AllArgsConstructor;
 
@@ -20,26 +22,26 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class SubCategoryController {
 
-    // private final SubCategoryService subCategoryService;
+    private final SubCategoryService subCategoryService;
 
     @PostMapping("/save")
-    public ResponseEntity<SubCategory> save(@RequestBody Category category) {
-        return new ResponseEntity(categoryService.saveCategory(category), HttpStatusCode.valueOf(200));
+    public ResponseEntity<SubCategory> save(@RequestBody SubCategory subCategory) {
+        return new ResponseEntity(subCategoryService.saveSubCategory(subCategory), HttpStatusCode.valueOf(200));
     }
 
     @PostMapping("/update")
-    public ResponseEntity<Category> update(@RequestBody Category category) {
-        return new ResponseEntity(categoryService.updateCategory(category), HttpStatusCode.valueOf(200));
+    public ResponseEntity<SubCategory> update(@RequestBody SubCategory subCategory) {
+        return new ResponseEntity(subCategoryService.updateSubCategory(subCategory), HttpStatusCode.valueOf(200));
     }
 
     @PostMapping("/delete")
-    public ResponseEntity<String> deleteCategory(@RequestBody Category category) {
-        return new ResponseEntity(categoryService.deleteCategory(category), HttpStatusCode.valueOf(200));
+    public ResponseEntity<String> delete(@RequestBody SubCategory subCategory) {
+        return new ResponseEntity(subCategoryService.deleteSubCategory(subCategory), HttpStatusCode.valueOf(200));
     }
 
     @PostMapping("/search")
-    public ResponseEntity<Page<Category>> search(@RequestBody CategorySearchDto categorySearchDto) {
-        return new ResponseEntity(categoryService.searchCategory(categorySearchDto), HttpStatusCode.valueOf(200));
+    public ResponseEntity<Page<SubCategory>> search(@RequestBody SubCategorySearchDto subCategorySearchDto) {
+        return new ResponseEntity(subCategoryService.searchSubCategory(subCategorySearchDto), HttpStatusCode.valueOf(200));
     }
 
 }

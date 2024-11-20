@@ -26,7 +26,7 @@ import lombok.experimental.Accessors;
 @Builder
 @Accessors(chain = true)
 @JsonIdentityInfo(generator = ObjectIdGenerators.UUIDGenerator.class, property = "@json_mapping_id")
-public class SubCategory {
+public class SubCategory extends Auditable {
 
     @Id
     @GeneratedValue(generator = "uuid")
