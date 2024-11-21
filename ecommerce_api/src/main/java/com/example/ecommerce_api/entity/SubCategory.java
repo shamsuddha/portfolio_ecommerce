@@ -1,20 +1,12 @@
 package com.example.ecommerce_api.entity;
 
-import org.hibernate.annotations.GenericGenerator;
+import java.util.List;
 
+import org.hibernate.annotations.GenericGenerator;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import jakarta.persistence.*;
+import lombok.*;
 import lombok.experimental.Accessors;
 
 @Entity
@@ -36,4 +28,13 @@ public class SubCategory extends Auditable {
     @Column(name = "name")
     private String name;
 
+    @Column(name = "slug")
+    private String slug;
+
+    @Column(name = "image_location")
+    private String image_location;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "category_id", nullable = false, foreignKey = @ForeignKey(name = "fk_category_id"))
+    private Category category;
 }

@@ -10,7 +10,7 @@ import org.springframework.util.CollectionUtils;
 public class CategoryPredicate {
 
     private static final QCategory qCategory = QCategory.category;
-
+    
     public static Predicate makePredicate(CategorySearchDto categorySearchDto) {
 
         BooleanBuilder builder = new BooleanBuilder();
@@ -24,14 +24,12 @@ public class CategoryPredicate {
         if (StringUtils.isNotBlank(categorySearchDto.getName())) {
             builder.and(qCategory.name.equalsIgnoreCase(categorySearchDto.getName()));
         }
-
         /*
          * if (StringUtils.isNotBlank(categorySearchDto.getCategoryCategoryId())) {
          * builder.and(qCategory.categoryCategoryId.equalsIgnoreCase(categorySearchDto.getCategoryCategoryId
          * ()));
          * }
          */
-
         return builder;
     }
 }
