@@ -7,7 +7,6 @@ export class SubCategory extends AuditLog {
   
   @prop() name: string | null = null;
   
-
   constructor(o?: Partial<SubCategory>) {
     super();
     Object.assign(this, o);

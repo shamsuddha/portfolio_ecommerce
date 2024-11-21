@@ -2,6 +2,8 @@ import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
 import { Page } from "../dto/Page";
+import { SubCategory } from "../entity/SubCategory";
+import { SubCategorySearchDto } from "../dto/SubCategorySearchDto";
 
 @Injectable({ providedIn: 'root' })
 export class SubCategoryController {
@@ -9,7 +11,7 @@ export class SubCategoryController {
     constructor(private httpClient: HttpClient) { }
 
     save(subCategory: SubCategory): Observable<SubCategory> {
-        
+
         return this.httpClient.post<SubCategory>('http://localhost:9999/sub-category/save', subCategory);
     }
 

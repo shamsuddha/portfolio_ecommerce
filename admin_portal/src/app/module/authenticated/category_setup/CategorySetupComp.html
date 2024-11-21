@@ -61,8 +61,10 @@
             </div>
             <div class="card-body row mb-4">
                 <div class="col-md-4 mt-2">
-                    <label class="form-label">Items Per Page</label>
-                    <!-- <ng-select [items]="showItemPerPage" formControlName="size" (change)="cng($event)"></ng-select> -->
+                    <form [formGroup]="itemPerPageFg">
+                        <label class="form-label">Items Per Page</label>
+                    <ng-select [items]="showItemPerPage" formControlName="size" (change)="cng($event)"></ng-select>
+                    </form>                    
                 </div>
                 <div class="col-md-8">
                     <PaginationComp></PaginationComp>

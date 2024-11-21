@@ -1,3 +1,4 @@
+import { ItemPerPageDto } from './../../../dto/ItemPerPageDto';
 import { CommonModule } from "@angular/common";
 import { Component, OnInit } from "@angular/core";
 import { DataGridComp } from "../../../widget/data_grid/DataGridComp";
@@ -11,7 +12,6 @@ import { ColDef } from "ag-grid-community";
 import { ButtonCellRendererComp } from "../../../widget/data_grid/button_cell_renderer/ButtonCellRendererComp";
 import { CategoryController } from "../../../controller/CategoryController";
 import { CategorySearchDto } from "../../../dto/CategorySearchDto";
-
 
 @Component({
     selector: 'CategorySetupComp',
@@ -30,9 +30,11 @@ import { CategorySearchDto } from "../../../dto/CategorySearchDto";
 export class CategorySetupComp implements OnInit {
 
     categoryFg: FormGroup = this.rxFormBuilder.formGroup(Category);
-    categorySearchFg: FormGroup = this.rxFormBuilder.formGroup(Category);
-    categoryList$: Observable<Array<Category>> = of([]);
+    categorySearchFg: FormGroup = this.rxFormBuilder.formGroup(CategorySearchDto);
+    itemPerPageFg: FormGroup = this.rxFormBuilder.formGroup(ItemPerPageDto);
     showItemPerPage: Array<number> = [10, 15, 20, 25];
+    categoryList$: Observable<Array<Category>> = of([]);
+    
     colDefList: ColDef[] = [
         { field: 'id' },
         { field: 'name' },
@@ -102,7 +104,6 @@ export class CategorySetupComp implements OnInit {
             .subscribe((e: Category) => {
                 this.search();
             });
-
     }
 
     onDeleteClick(data: any) {
@@ -132,8 +133,7 @@ export class CategorySetupComp implements OnInit {
         this.categoryFg.reset();
     }
 
-    cng($event: any) {
-        console.log($event)
+    cng(event: any) {
+        console.log(event)
     }
-
 }
