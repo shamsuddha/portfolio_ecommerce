@@ -2,7 +2,6 @@ package com.example.ecommerce_api.service;
 
 import com.querydsl.core.types.Predicate;
 import com.querydsl.jpa.impl.JPAQuery;
-import com.example.ecommerce_api.controller.request_dto.CategorySearchDto;
 import com.example.ecommerce_api.controller.request_dto.SubCategorySearchDto;
 import com.example.ecommerce_api.entity.QCategory;
 import com.example.ecommerce_api.entity.QSubCategory;

@@ -1,4 +1,3 @@
-import { ItemPerPageDto } from './../../../dto/ItemPerPageDto';
 import { CommonModule } from "@angular/common";
 import { Component, OnInit } from "@angular/core";
 import { DataGridComp } from "../../../widget/data_grid/DataGridComp";
@@ -7,11 +6,13 @@ import { RxFormBuilder, RxReactiveFormsModule } from "@rxweb/reactive-form-valid
 import { PaginationComp } from "../../../widget/pagination/PaginationComp";
 import { NgSelectModule } from "@ng-select/ng-select";
 import { Category } from "../../../entity/Category";
-import { map, Observable, of } from "rxjs";
+import { map, Observable, of, tap } from "rxjs";
 import { ColDef } from "ag-grid-community";
 import { ButtonCellRendererComp } from "../../../widget/data_grid/button_cell_renderer/ButtonCellRendererComp";
 import { CategoryController } from "../../../controller/CategoryController";
 import { CategorySearchDto } from "../../../dto/CategorySearchDto";
+import { PageChangedEvent } from 'ngx-bootstrap/pagination';
+import { Page } from '../../../dto/Page';
 
 @Component({
   selector: 'CategorySetupComp',
@@ -31,13 +32,15 @@ export class CategorySetupComp implements OnInit {
 
   categoryFg: FormGroup = this.rxFormBuilder.formGroup(Category);
   categorySearchFg: FormGroup = this.rxFormBuilder.formGroup(CategorySearchDto);
-  itemPerPageFg: FormGroup = this.rxFormBuilder.formGroup(ItemPerPageDto);
+  categoryPage: Page<Category> = new Page<Category>();
   showItemPerPage: Array<number> = [10, 15, 20, 25];
   categoryList$: Observable<Array<Category>> = of([]);
 
   colDefList: ColDef[] = [
     { field: 'id' },
     { field: 'name' },
+    { field: 'slug' },
+    { field: 'image_location' },
     {
       headerName: '', editable: false, colId: 'action', width: 80,
       cellRenderer: ButtonCellRendererComp, pinned: 'left',
@@ -82,14 +85,14 @@ export class CategorySetupComp implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.search();
+    this.search({ page: 0, itemsPerPage: this.categorySearchFg.value['size'] });
   }
 
   save() {
     this.categoryController.save(this.categoryFg.value)
       .subscribe((e: Category) => {
         console.log(e);
-        this.search();
+        this.search({ page: 0, itemsPerPage: this.categorySearchFg.value['size'] });
       });
   }
 
@@ -102,18 +105,25 @@ export class CategorySetupComp implements OnInit {
   update() {
     this.categoryController.update(this.categoryFg.value)
       .subscribe((e: Category) => {
-        this.search();
+        this.search({ page: 0, itemsPerPage: this.categorySearchFg.value['size'] });
       });
   }
 
   onDeleteClick(data: any) {
     this.categoryController.delete(data)
-      .subscribe((e) => { this.search(); });
+      .subscribe((e) => { this.search({ page: 0, itemsPerPage: this.categorySearchFg.value['size'] }); });
   }
 
-  search() {
-    this.categoryList$ = this.categoryController.search(new CategorySearchDto({ 'idList': [] }))
-      .pipe(map(e => e.content));
+  search(pce: PageChangedEvent) {
+    this.categoryList$ = this.categoryController
+      .search(new CategorySearchDto({
+        "idList": [],
+        page: pce.page,
+        size: pce.itemsPerPage
+      }))
+      .pipe(
+        tap((e) => this.categoryPage = e),
+        map(e => e.content));
   }
 
   searchByName(data: any) {
@@ -133,7 +143,45 @@ export class CategorySetupComp implements OnInit {
     this.categoryFg.reset();
   }
 
-  cng(event: any) {
-    console.log(event)
+  cng($event: any) {
+    console.log($event)
   }
+
+  // onChooseDocumentFile(event: any) {
+  //   if (event.target.files.length === 0) {
+  //     return;
+  //   }
+  //   const file: File = event.target.files[0];
+  //   const extension: string = file.name.split('.').pop() ?? '';
+  //   const size = event.target.files[0].size;
+  //   if (size > 2 * 1024 * 1024) {
+  //     console.error("File can not be more then 2mb", `Message`);
+  //     return;
+  //   }
+  //   if (extension === 'jpg' || extension === 'jpeg' || extension === 'png' || extension === 'webp'
+  //     || extension === 'pdf' || extension === 'doc' || extension === 'docx') {
+  //     this.selectedDocumentFile = file;
+  //     console.log(this.selectedDocumentFile?.name)
+  //   } else {
+  //     console.error("Not valid file type.Only JPG, PNG, WEBP, pdf, doc, docx are acceptable", `Message`);
+  //     return;
+  //   }
+  // }
+
+  // uploadDocumentFile() {
+  //   if (this.selectedDocumentFile === null) {
+  //     console.error("Choose a file", `Message`);
+  //     return;
+  //   }
+  //   this.roomController.fileUpload(this.selectedDocumentFile)
+  //     .pipe(
+  //       //uploadProgress(progress => (this.imageUploadProgress = progress)),
+  //       toResponseBody()
+  //     )
+  //     .subscribe((res: any) => {
+  //       console.log(res)
+  //     }, error => {
+  //       console.log(error)
+  //     });
+  // }
 }

@@ -37,21 +37,21 @@
 		</div>
 	</div>
 	<div class="col-xl-8">
-		<div class="card">
+		<div class="card" [formGroup]="categorySearchFg">
 			<div class="card-header">
 				<h4 class="card-title">Category List</h4>
 				<p class="card-title-desc"></p>
-				<div class="row">
-					<form [formGroup]="categorySearchFg">
-						<input type="text" class="form-control" placeholder="Category search by name" formControlName="name">
+				<div class="row">					
+						<input type="text" class="form-control" placeholder="Category search by name"
+							formControlName="name">
 						<button type="button" (click)="searchByName(categorySearchFg.controls['name'].value)"
 							class="btn btn-outline-primary waves-effect waves-light mt-2 mx-1">
 							Search by name
 						</button>
-						<button type="button" (click)="search()" class="btn btn-outline-primary waves-effect waves-light mt-2 mx-1">
+						<button type="button" (click)="search({ page: 0, itemsPerPage: this.categorySearchFg.value['size'] })"
+							class="btn btn-outline-primary waves-effect waves-light mt-2 mx-1">
 							Search all
-						</button>
-					</form>
+						</button>					
 				</div>
 			</div>
 			<div class="card-body">
@@ -59,13 +59,13 @@
 			</div>
 			<div class="card-body row mb-4">
 				<div class="col-md-4 mt-2">
-					<form [formGroup]="itemPerPageFg">
-						<label class="form-label">Items Per Page</label>
-						<ng-select [items]="showItemPerPage" formControlName="size" (change)="cng($event)"></ng-select>
-					</form>
+					<label class="form-label">Items Per Page</label>
+					<ng-select [items]="showItemPerPage" formControlName="size" (change)="cng($event)"></ng-select>
 				</div>
 				<div class="col-md-8">
-					<PaginationComp></PaginationComp>
+					<PaginationComp [page]="categoryPage"
+					(onPageChange)="search($event)"
+	></PaginationComp>
 				</div>
 			</div>
 		</div>
