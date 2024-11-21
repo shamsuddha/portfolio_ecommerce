@@ -40,8 +40,11 @@ public class Category extends Auditable {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "code")
-    private String code;
+    @Column(name = "slug")
+    private String slug;
+
+    @Column(name = "image_location")
+    private String image_location;
 
     @OneToMany(mappedBy = "category", fetch = FetchType.LAZY)
     private List<SubCategory> subCategoryList;

@@ -32,13 +32,13 @@ public class SubCategoryService {
     return this.subCategoryRepository.save(subCategory);
   }
 
-  @org.springframework.transaction.annotation.Transactional
-  public SubCategory updateSubCategory(SubCategory subCategory) {
-    var subCategoryDb = entityValidationService.validateSubCategory(subCategory.getId());
-    subCategoryDb.setName(subCategory.getName());
-    subCategoryDb = subCategoryRepository.save(subCategoryDb);
-    return subCategoryDb;
-  }
+    @org.springframework.transaction.annotation.Transactional
+    public SubCategory updateSubCategory(SubCategory subCategory) {
+      var subCategoryDb = entityValidationService.validateSubCategory(subCategory.getId());
+      subCategoryDb.setName(subCategoryDb.getName());
+      subCategoryDb = subCategoryRepository.save(subCategoryDb);
+      return subCategoryDb;
+    }
 
   @org.springframework.transaction.annotation.Transactional
   public String deleteSubCategory(SubCategory subCategory) {
