@@ -13,6 +13,7 @@ import { CategoryController } from "../../../controller/CategoryController";
 import { CategorySearchDto } from "../../../dto/CategorySearchDto";
 import { PageChangedEvent } from 'ngx-bootstrap/pagination';
 import { Page } from '../../../dto/Page';
+import { toResponseBody } from "../../../util/FileUtil";
 
 @Component({
   selector: 'CategorySetupComp',
@@ -35,6 +36,7 @@ export class CategorySetupComp implements OnInit {
   categoryPage: Page<Category> = new Page<Category>();
   showItemPerPage: Array<number> = [10, 15, 20, 25];
   categoryList$: Observable<Array<Category>> = of([]);
+  selectedDocumentFile: File | null = null;
 
   colDefList: ColDef[] = [
     { field: 'id' },
@@ -143,45 +145,46 @@ export class CategorySetupComp implements OnInit {
     this.categoryFg.reset();
   }
 
-  cng($event: any) {
-    console.log($event)
+  cng(event: any) {
+    console.log(event);
+    this.search({ page: 0, itemsPerPage: event });
   }
 
-  // onChooseDocumentFile(event: any) {
-  //   if (event.target.files.length === 0) {
-  //     return;
-  //   }
-  //   const file: File = event.target.files[0];
-  //   const extension: string = file.name.split('.').pop() ?? '';
-  //   const size = event.target.files[0].size;
-  //   if (size > 2 * 1024 * 1024) {
-  //     console.error("File can not be more then 2mb", `Message`);
-  //     return;
-  //   }
-  //   if (extension === 'jpg' || extension === 'jpeg' || extension === 'png' || extension === 'webp'
-  //     || extension === 'pdf' || extension === 'doc' || extension === 'docx') {
-  //     this.selectedDocumentFile = file;
-  //     console.log(this.selectedDocumentFile?.name)
-  //   } else {
-  //     console.error("Not valid file type.Only JPG, PNG, WEBP, pdf, doc, docx are acceptable", `Message`);
-  //     return;
-  //   }
-  // }
+  onChooseDocumentFile(event: any) {
+    if (event.target.files.length === 0) {
+      return;
+    }
+    const file: File = event.target.files[0];
+    const extension: string = file.name.split('.').pop() ?? '';
+    const size = event.target.files[0].size;
+    if (size > 2 * 1024 * 1024) {
+      console.error("File can not be more then 2mb", `Message`);
+      return;
+    }
+    if (extension === 'jpg' || extension === 'jpeg' || extension === 'png' || extension === 'webp'
+      || extension === 'pdf' || extension === 'doc' || extension === 'docx') {
+      this.selectedDocumentFile = file;
+      console.log(this.selectedDocumentFile?.name)
+    } else {
+      console.error("Not valid file type.Only JPG, PNG, WEBP, pdf, doc, docx are acceptable", `Message`);
+      return;
+    }
+  }
 
-  // uploadDocumentFile() {
-  //   if (this.selectedDocumentFile === null) {
-  //     console.error("Choose a file", `Message`);
-  //     return;
-  //   }
-  //   this.roomController.fileUpload(this.selectedDocumentFile)
-  //     .pipe(
-  //       //uploadProgress(progress => (this.imageUploadProgress = progress)),
-  //       toResponseBody()
-  //     )
-  //     .subscribe((res: any) => {
-  //       console.log(res)
-  //     }, error => {
-  //       console.log(error)
-  //     });
-  // }
+  uploadDocumentFile() {
+    if (this.selectedDocumentFile === null) {
+      console.error("Choose a file", `Message`);
+      return;
+    }
+    this.categoryController.fileUpload(this.selectedDocumentFile)
+      .pipe(
+        //uploadProgress(progress => (this.imageUploadProgress = progress)),
+        toResponseBody()
+      )
+      .subscribe((res: any) => {
+        console.log(res)
+      }, error => {
+        console.log(error)
+      });
+  }
 }

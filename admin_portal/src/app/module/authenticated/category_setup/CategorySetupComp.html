@@ -22,6 +22,10 @@
 						<input formControlName="name" class="form-control" type="text" id="name"
 							placeholder="Enter category name" />
 					</div>
+					<div class="mb-4">
+						<label class="form-label" for="image">Category Image</label>
+						<input (change)="onChooseDocumentFile($event)" formControlName="image_location" class="form-control" type="file" id="image" />
+					</div>
 					@if (categoryFg.controls['updateMode'].value == true) {
 					<button type="submit" class="btn btn-outline-primary waves-effect waves-light mt-2 mx-1"
 						(click)="update()">Update</button>
@@ -39,19 +43,26 @@
 	<div class="col-xl-8">
 		<div class="card" [formGroup]="categorySearchFg">
 			<div class="card-header">
-				<h4 class="card-title">Category List</h4>
+				<h4 class="card-title">All Categories</h4>
 				<p class="card-title-desc"></p>
-				<div class="row">					
-						<input type="text" class="form-control" placeholder="Category search by name"
-							formControlName="name">
+				<div class="row">
+					<div class="col-6 col-lg-4">
+						<input type="text" class="form-control" placeholder="Enter Id" formControlName="id">
+					</div>
+					<div class="col-6 col-lg-4">
+						<input type="text" class="form-control" placeholder="Enter Name" formControlName="name">
+					</div>
+					<div class="col-12 col-lg-4 ">
 						<button type="button" (click)="searchByName(categorySearchFg.controls['name'].value)"
-							class="btn btn-outline-primary waves-effect waves-light mt-2 mx-1">
-							Search by name
+							class="btn btn-outline-primary waves-effect waves-light mx-1">
+							Search
 						</button>
-						<button type="button" (click)="search({ page: 0, itemsPerPage: this.categorySearchFg.value['size'] })"
-							class="btn btn-outline-primary waves-effect waves-light mt-2 mx-1">
+						<button type="button"
+							(click)="search({ page: 0, itemsPerPage: this.categorySearchFg.value['size'] })"
+							class="btn btn-outline-primary waves-effect waves-light mx-1">
 							Search all
-						</button>					
+						</button>
+					</div>
 				</div>
 			</div>
 			<div class="card-body">
@@ -63,9 +74,7 @@
 					<ng-select [items]="showItemPerPage" formControlName="size" (change)="cng($event)"></ng-select>
 				</div>
 				<div class="col-md-8">
-					<PaginationComp [page]="categoryPage"
-					(onPageChange)="search($event)"
-	></PaginationComp>
+					<PaginationComp [page]="categoryPage" (onPageChange)="search($event)"></PaginationComp>
 				</div>
 			</div>
 		</div>

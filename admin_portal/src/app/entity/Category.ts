@@ -3,8 +3,10 @@ import { AuditLog } from "./AuditLog";
 
 export class Category extends AuditLog {
 
-  @prop() id: number | null = null;
+  @prop() id: string | null = null;
   @prop() name: string | null = null;
+  @prop() slug: string | null = null;
+  @prop() image_location: string | null = null;
 
   constructor(o?: Partial<Category>) {
     super();
